@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capacitaciones Esterilización — Fundación Favaloro</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F5F4EF;color:#1A1915;min-height:100vh}
+.app{max-width:960px;margin:0 auto;padding:1rem}
+.header{background:#fff;border:1px solid #E5E4DF;border-radius:12px;padding:.75rem 1rem;margin-bottom:.875rem;display:flex;align-items:center;gap:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);flex-wrap:wrap}
+.logo{width:42px;height:42px;border-radius:10px;background:#0C447C;display:flex;align-items:center;justify-content:center;color:#E6F1FB;font-size:14px;font-weight:700;flex-shrink:0}
+.hinfo{flex:1;min-width:120px}.hinfo h1{font-size:14px;font-weight:600;line-height:1.3}.hinfo p{font-size:10px;color:#7A7974}
+.rsw{display:flex;gap:2px;background:#F1EFE8;border-radius:8px;padding:3px;flex-shrink:0}
+.rbtn{padding:5px 9px;font-size:10px;border:none;background:transparent;border-radius:6px;cursor:pointer;color:#7A7974;font-weight:500;white-space:nowrap}
+.rbtn.on{background:#fff;color:#1A1915;box-shadow:0 1px 3px rgba(0,0,0,.12);border:1px solid #E5E4DF}
+.bell{position:relative;cursor:pointer;padding:6px;border-radius:8px;border:1px solid #E5E4DF;background:#fff;display:flex;align-items:center;justify-content:center;color:#7A7974;flex-shrink:0}
+.bell:hover{background:#F5F4EF}
+.bdot{position:absolute;top:5px;right:5px;width:8px;height:8px;border-radius:50%;background:#E24B4A;display:none}
+.bdot.on{display:block}
+.tabs{display:flex;gap:3px;background:#E5E4DF;border-radius:10px;padding:3px;margin-bottom:.875rem;flex-wrap:wrap}
+.tab{flex:1;min-width:52px;padding:6px 3px;font-size:10px;border:none;background:transparent;border-radius:7px;cursor:pointer;color:#7A7974;font-weight:500;white-space:nowrap;text-align:center}
+.tab.on{background:#fff;color:#1A1915;box-shadow:0 1px 3px rgba(0,0,0,.1);border:1px solid #E5E4DF}
+.sec{display:none}.sec.on{display:block}
+.card{background:#fff;border:1px solid #E5E4DF;border-radius:12px;padding:1rem 1.125rem;margin-bottom:.75rem;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ct{font-size:13px;font-weight:600;margin-bottom:.75rem}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.75rem}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.75rem;margin-bottom:.75rem}
+.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:.75rem;margin-bottom:.75rem}
+.met{background:#F5F4EF;border-radius:10px;padding:.875rem;text-align:center;border:1px solid #E5E4DF}
+.mv{font-size:26px;font-weight:700}.ml{font-size:11px;color:#7A7974;margin-top:2px}
+.btn{padding:7px 13px;border-radius:8px;border:1px solid #D5D4CF;background:#fff;cursor:pointer;font-size:12px;font-family:inherit;color:#1A1915;font-weight:500}
+.btn:hover{background:#F5F4EF}
+.bp{background:#0C447C;color:#fff;border-color:#0C447C}.bp:hover{background:#185FA5}
+.bs{padding:5px 10px;font-size:11px}
+.bd{color:#A32D2D;border-color:transparent;background:transparent}.bd:hover{background:#FCEBEB}
+.bg{background:#27500A;color:#fff;border-color:#27500A}.bg:hover{background:#3B6D11}
+.bq{background:#3C3489;color:#fff;border-color:#3C3489}.bq:hover{background:#534AB7}
+.badge{font-size:10px;padding:2px 7px;border-radius:10px;font-weight:600;white-space:nowrap}
+.bok{background:#EAF3DE;color:#27500A}.bwarn{background:#FAEEDA;color:#633806}
+.bdanger{background:#FCEBEB;color:#791F1F}.bblue{background:#E6F1FB;color:#0C447C}
+.bgray{background:#F1EFE8;color:#444}.bpurple{background:#EEEDFE;color:#3C3489}
+.bteal{background:#E1F5EE;color:#085041}.bcoral{background:#FAECE7;color:#712B13}
+.li{display:flex;align-items:center;gap:9px;padding:10px 0;border-bottom:1px solid #F1EFE8}
+.li:last-child{border-bottom:none}
+.lm{flex:1;min-width:0}.lt{font-size:12px;font-weight:600}.ls{font-size:11px;color:#7A7974}
+.av{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;background:#E6F1FB;color:#0C447C}
+.pb{background:#F1EFE8;border-radius:4px;height:5px;overflow:hidden}
+.pf{height:100%;border-radius:4px;background:#0C447C}
+.sh{font-size:14px;font-weight:600;margin-bottom:.75rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.empty{text-align:center;padding:2rem;color:#7A7974;font-size:12px}
+.hr{border:none;border-top:1px solid #F1EFE8;margin:.75rem 0}
+.ai{background:#E6F1FB;color:#0C447C;border:1px solid #B5D4F4;padding:10px 12px;border-radius:8px;font-size:12px;margin-bottom:.75rem}
+.aw{background:#FAEEDA;color:#633806;border:1px solid #FAC775;padding:10px 12px;border-radius:8px;font-size:12px;margin-bottom:.75rem}
+.ae{background:#FCEBEB;color:#791F1F;border:1px solid #F7C1C1;padding:10px 12px;border-radius:8px;font-size:12px;margin-bottom:.75rem}
+.cc{background:#fff;border:1px solid #E5E4DF;border-radius:12px;padding:1rem 1.125rem;margin-bottom:.625rem}
+.sa{border-left:3px solid #E24B4A;border-radius:0 12px 12px 0}
+.sm{border-left:3px solid #EF9F27;border-radius:0 12px 12px 0}
+.sb{border-left:3px solid #639922;border-radius:0 12px 12px 0}
+.br{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.bl{font-size:10px;color:#7A7974;width:130px;flex-shrink:0;text-align:right}
+.bb{flex:1;height:16px;background:#F1EFE8;border-radius:4px;overflow:hidden}
+.bf{height:100%;border-radius:4px;background:#0C447C}
+.bv{font-size:10px;font-weight:600;width:22px;flex-shrink:0}
+.fb{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:.75rem;align-items:center}
+.fld{margin-bottom:.75rem}
+.fld label{font-size:11px;color:#7A7974;display:block;margin-bottom:4px;font-weight:500}
+.fld input,.fld select,.fld textarea{width:100%;padding:8px 10px;border:1px solid #D5D4CF;border-radius:8px;font-size:12px;font-family:inherit;background:#fff;color:#1A1915}
+.fld textarea{resize:vertical;min-height:60px}
+.fld input[type=file]{background:#F5F4EF;padding:6px 10px;font-size:11px;color:#7A7974}
+.pb2{background:#F5F4EF;border:1px solid #E5E4DF;border-radius:8px;padding:10px;margin-bottom:8px}
+.pb2 input[type=text]{width:100%;padding:7px 9px;border:1px solid #D5D4CF;border-radius:7px;font-size:12px;font-family:inherit;background:#fff;color:#1A1915;margin-bottom:5px}
+.rr{display:flex;align-items:center;gap:7px;margin-bottom:5px}
+.rr input[type=radio]{flex-shrink:0}
+.rr input[type=text]{flex:1;padding:6px 9px;border:1px solid #D5D4CF;border-radius:7px;font-size:12px;font-family:inherit;background:#fff;color:#1A1915}
+.qc{background:#fff;border:1px solid #E5E4DF;border-radius:12px;padding:1.25rem;margin-bottom:.75rem}
+.qprog{display:flex;gap:4px;margin-bottom:1rem}
+.qdot{flex:1;height:4px;border-radius:2px;background:#F1EFE8}
+.qdot.done{background:#0C447C}.qdot.cur{background:#378ADD}
+.qopt{display:flex;align-items:center;gap:10px;padding:11px 13px;border:1px solid #E5E4DF;border-radius:9px;margin-bottom:7px;cursor:pointer;background:#fff}
+.qopt:hover{background:#F5F4EF}
+.qopt.sel{border-color:#378ADD;background:#E6F1FB}
+.qopt.ok{border-color:#3B6D11;background:#EAF3DE}
+.qopt.no{border-color:#A32D2D;background:#FCEBEB}
+.qcirc{width:24px;height:24px;border-radius:50%;border:1px solid #D5D4CF;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;color:#7A7974;background:#F5F4EF}
+.qopt.sel .qcirc{background:#378ADD;border-color:#378ADD;color:#fff}
+.qopt.ok .qcirc{background:#3B6D11;border-color:#3B6D11;color:#fff}
+.qopt.no .qcirc{background:#A32D2D;border-color:#A32D2D;color:#fff}
+.mw{display:none;position:fixed;inset:0;z-index:9999;overflow-y:auto;padding:1.5rem 1rem;background:rgba(0,0,0,.5)}
+.mw.on{display:block}
+.mb{background:#fff;border:1px solid #D5D4CF;border-radius:14px;padding:1.375rem;width:100%;max-width:600px;margin:0 auto;box-shadow:0 8px 32px rgba(0,0,0,.18)}
+.mh{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.mt{font-size:15px;font-weight:700}
+.xb{background:#F5F4EF;border:1px solid #E5E4DF;border-radius:7px;font-size:16px;cursor:pointer;color:#7A7974;padding:3px 10px;line-height:1;font-family:inherit}
+.mf{display:flex;gap:8px;justify-content:flex-end;margin-top:1rem;padding-top:.875rem;border-top:1px solid #F1EFE8}
+.np{background:#fff;border:1px solid #E5E4DF;border-radius:12px;padding:1rem;margin-bottom:.75rem;box-shadow:0 4px 16px rgba(0,0,0,.1)}
+.isel{padding:5px 8px;border:1px solid #D5D4CF;border-radius:8px;font-size:11px;font-family:inherit;background:#fff;color:#1A1915}
+.tlr{background:#fff;border:1px solid #E5E4DF;border-radius:12px;padding:.75rem 1rem;margin-bottom:.75rem;display:flex;align-items:center;gap:10px}
+#ls{position:fixed;inset:0;background:#F5F4EF;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:99999}
+.ll{width:56px;height:56px;border-radius:14px;background:#0C447C;display:flex;align-items:center;justify-content:center;color:#E6F1FB;font-size:18px;font-weight:700;margin-bottom:1rem}
+@media(max-width:600px){
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  .header img{height:36px !important}
+  .hinfo h1{font-size:13px}
+  .tabs{gap:2px;padding:2px}
+  .tab{font-size:9px;padding:5px 2px;min-width:44px}
+  .rbtn{font-size:9px;padding:4px 7px}
+  .sh{font-size:12px}
+  .btn{padding:6px 10px;font-size:11px}
+  .btn.bs{padding:4px 7px;font-size:10px}
+  .cc,.card{padding:.75rem .875rem}
+  .met{padding:.625rem}
+  .mv{font-size:22px}
+  .tec-sel-wrap .tlr{flex-wrap:wrap}
+}
+@media(max-width:400px){
+  .tab{font-size:8px;padding:5px 1px;min-width:38px}
+  .rbtn{font-size:9px;padding:4px 5px}
+}
+</style>
+</head>
+<body>
+
+<div id="ls">
+  <div class="ll">FF</div>
+  <strong style="font-size:15px;margin-bottom:.5rem">Cargando aplicación...</strong>
+  <p style="font-size:12px;color:#7A7974">Conectando con la base de datos</p>
+</div>
+
+<div class="app" id="ap" style="display:none">
+
+<div class="header">
+  <img src="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QPPaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcFJpZ2h0cz0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3JpZ2h0cy8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBSaWdodHM6TWFya2VkPSJGYWxzZSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ1dWlkOjg3ODc4RjIzNkU1MEUwMTFCQjU5QzI5NkJDRTkyMThFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkQ2NEVBNTcwMUVBRTExRTY4MzMxQzU4ODI1ODNDODM1IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkQ2NEVBNTZGMUVBRTExRTY4MzMxQzU4ODI1ODNDODM1IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowMjgwMTE3NDA3MjA2ODExODIyQUJCMTNGQUU5Q0NDMyIgc3RSZWY6ZG9jdW1lbnRJRD0i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" style="height:44px;width:auto;flex-shrink:0" alt="Fundación Favaloro">
+  <div class="hinfo" style="margin-left:4px"><h1>Capacitaciones — Esterilización</h1><p>Central de Esterilización · Hospital Universitario</p></div>
+  <div style="display:flex;align-items:center;gap:8px;flex-shrink:0">
+    <button class="bell" onclick="togNotif()" title="Alertas" id="bell-btn" style="display:none">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+      <span class="bdot" id="bdot"></span>
+    </button>
+    <div class="rsw">
+      <button class="rbtn" id="rb-tec" onclick="setRol('tecnico',this)">Técnico</button>
+      <button class="rbtn" id="rb-jefe" onclick="pedirPin()">Farmacéutico Jefe</button>
+    </div>
+  </div>
+</div>
+
+<div id="notif-wrap" style="display:none"><div class="np" id="notif-inner"></div></div>
+
+<div id="tec-sel-wrap" style="display:none">
+  <div class="tlr">
+    <span style="font-size:12px;color:#7A7974;white-space:nowrap;flex-shrink:0">Iniciando sesión como:</span>
+    <select id="tec-sel" class="isel" style="flex:1" onchange="setTecLogin()"><option value="">Seleccioná tu nombre...</option></select>
+  </div>
+</div>
+
+<div id="tabs-jefe">
+  <div class="tabs">
+    <button class="tab on" onclick="showTab('dash',this)">Resumen</button>
+    <button class="tab" onclick="showTab('caps',this)">Capacitaciones</button>
+    <button class="tab" onclick="showTab('tecs',this)">Técnicos</button>
+    <button class="tab" onclick="showTab('asist',this)">Asistencia</button>
+    <button class="tab" onclick="showTab('casos',this)">Casos</button>
+    <button class="tab" onclick="showTab('reps',this)">Reportes</button>
+  </div>
+</div>
+<div id="tabs-tec" style="display:none">
+  <div class="tabs">
+    <button class="tab on" onclick="showTabT('ti',this)">Mis capacitaciones</button>
+    <button class="tab" onclick="showTabT('tq',this)">Hacer quiz</button>
+    <button class="tab" onclick="showTabT('tc',this)">Casos de estudio</button>
+    <button class="tab" onclick="showTabT('th',this)">Mi historial</button>
+  </div>
+</div>
+
+<!-- JEFE SECCIONES -->
+<div id="s-dash" class="sec on">
+  <div style="display:flex;justify-content:flex-end;gap:6px;margin-bottom:.75rem">
+    <button class="btn bs" onclick="openM('m-cambiar-pin')" style="font-size:11px">🔑 Cambiar PIN</button>
+    <button class="btn bs bd" onclick="cerrarSesionJefe()" style="font-size:11px">↩ Cerrar sesión</button>
+  </div>
+  <div class="g4">
+    <div class="met"><div class="mv" id="mc">—</div><div class="ml">Capacitaciones</div></div>
+    <div class="met"><div class="mv" id="mt">—</div><div class="ml">Técnicos</div></div>
+    <div class="met"><div class="mv" id="mp">—</div><div class="ml">Promedio aprobación</div></div>
+    <div class="met"><div class="mv" id="mk">—</div><div class="ml">Casos registrados</div></div>
+  </div>
+  <div id="da"></div>
+  <div class="card"><div class="ct">Progreso de capacitaciones</div><div id="dp"></div></div>
+  <div class="g2">
+    <div class="card"><div class="ct">Casos por tipo de falla</div><div id="dc"></div></div>
+    <div class="card"><div class="ct">Últimas actividades</div><div id="dac"></div></div>
+  </div>
+</div>
+
+<div id="s-caps" class="sec">
+  <div class="sh"><span>Capacitaciones</span><button class="btn bp bs" onclick="openM('m-cap')">+ Nueva capacitación</button></div>
+  <div id="cap-list"></div>
+</div>
+
+<div id="s-tecs" class="sec">
+  <div class="sh"><span>Técnicos</span>
+    <div style="display:flex;gap:6px;align-items:center">
+      <select id="ft" onchange="rdTecs()" class="isel"><option value="">Todos los turnos</option><option>Mañana</option><option>Tarde</option><option>Noche</option><option>Franquero</option></select>
+      <button class="btn bp bs" onclick="openM('m-tec')">+ Agregar</button>
+    </div>
+  </div>
+  <div id="tec-list"></div>
+</div>
+
+<div id="s-asist" class="sec">
+  <div class="sh"><span>Registro de asistencia</span></div>
+  <div class="card">
+    <div class="g2">
+      <div class="fld"><label>Capacitación</label><select id="asel" onchange="rdAsist()"><option value="">Seleccioná...</option></select></div>
+      <div class="fld"><label>Fecha</label><input type="date" id="afec" onchange="rdAsist()"></div>
+    </div>
+  </div>
+  <div id="asist-panel"></div>
+</div>
+
+<div id="s-casos" class="sec">
+  <div class="sh"><span>Estudio de casos</span><button class="btn bp bs" onclick="openM('m-caso')">+ Nuevo caso</button></div>
+  <div class="fb">
+    <select id="ftipo" onchange="rdCasos()" class="isel"><option value="">Todos los tipos</option></select>
+    <select id="fsev" onchange="rdCasos()" class="isel"><option value="">Toda severidad</option><option>Alta</option><option>Media</option><option>Baja</option></select>
+    <input id="ftxt" placeholder="Buscar..." oninput="rdCasos()" style="padding:5px 9px;border:1px solid #D5D4CF;border-radius:8px;font-size:11px;font-family:inherit;width:150px">
+  </div>
+  <div id="caso-list"></div>
+</div>
+
+<div id="s-reps" class="sec">
+  <div class="sh"><span>Reportes y exportación</span></div>
+  <div class="g2">
+    <div class="card"><div class="ct">Reporte de capacitaciones</div>
+      <p style="font-size:11px;color:#7A7974;margin-bottom:10px">Resultados por técnico y capacitación.</p>
+      <div class="fld"><label>Filtrar turno</label><select id="rturno"><option value="">Todos</option><option>Mañana</option><option>Tarde</option><option>Noche</option><option>Franquero</option></select></div>
+      <button class="btn bg bs" onclick="expCaps()">⬇ Descargar CSV</button>
+    </div>
+    <div class="card"><div class="ct">Reporte de asistencia</div>
+      <p style="font-size:11px;color:#7A7974;margin-bottom:10px">Historial completo de asistencia.</p>
+      <button class="btn bg bs" onclick="expAsist()">⬇ Descargar CSV</button>
+    </div>
+  </div>
+  <div class="g2">
+    <div class="card"><div class="ct">Reporte de casos</div>
+      <p style="font-size:11px;color:#7A7974;margin-bottom:10px">Casos clasificados por tipo de falla.</p>
+      <div class="fld"><label>Tipo de falla</label><select id="rtipo"><option value="">Todos</option></select></div>
+      <button class="btn bg bs" onclick="expCasos()">⬇ Descargar CSV</button>
+    </div>
+    <div class="card"><div class="ct">Alertas de vencimiento</div>
+      <p style="font-size:11px;color:#7A7974;margin-bottom:10px">Técnicos con capacitaciones vencidas o por vencer.</p>
+      <button class="btn bg bs" onclick="expAlertas()">⬇ Descargar CSV</button>
+    </div>
+  </div>
+</div>
+
+<!-- TECNICO SECCIONES -->
+<div id="s-ti" class="sec"><div id="ti-body"></div></div>
+<div id="s-tq" class="sec"><div id="tq-body"></div></div>
+<div id="s-tc" class="sec">
+  <div class="sh"><span>Casos de estudio</span></div>
+  <div class="fb"><select id="tftipo" onchange="rdCasosT()" class="isel"><option value="">Todos los tipos</option></select></div>
+  <div id="tc-list"></div>
+</div>
+<div id="s-th" class="sec"><div id="th-body"></div></div>
+
+</div><!-- /app -->
+
+<!-- MODALES -->
+<div class="mw" id="m-cap">
+<div class="mb">
+  <div class="mh"><span class="mt">Nueva capacitación</span><button class="xb" onclick="closeM('m-cap')">×</button></div>
+  <div class="fld"><label>Título *</label><input type="text" id="ctit" placeholder="Ej: Manejo del autoclave clase B"></div>
+  <div class="fld"><label>Tema</label>
+    <select id="ctema"><option>Esterilización por vapor</option><option>Esterilización por óxido de etileno</option><option>Esterilización por plasma</option><option>Clasificación de instrumental</option><option>Control de calidad y trazabilidad</option><option>Normas de bioseguridad</option><option>Empaque y embalaje</option><option>Mantenimiento de equipos</option><option>Normativa ANMAT / IRAM</option><option>Otro</option></select>
+  </div>
+  <div class="fld"><label>Descripción</label><textarea id="cdesc" rows="3" placeholder="Contenido de la capacitación..."></textarea></div>
+  <div class="g2" style="margin-bottom:0">
+    <div class="fld"><label>Duración</label><input type="text" id="cdur" placeholder="Ej: 45 minutos"></div>
+    <div class="fld"><label>Vigencia (días)</label><input type="number" id="cvig" value="365" min="1"></div>
+  </div>
+  <div class="fld"><label>Imagen (opcional)</label>
+    <input type="file" id="cimg" accept="image/*" onchange="prevImg(this,'cprev')">
+    <img id="cprev" style="display:none;max-width:100%;max-height:120px;border-radius:8px;margin-top:6px;object-fit:contain;border:1px solid #E5E4DF">
+  </div>
+  <div class="hr"></div>
+  <div style="font-size:12px;font-weight:600;margin-bottom:8px">Preguntas de evaluación</div>
+  <div id="plist"></div>
+  <button class="btn bs" onclick="addPreg()">+ Agregar pregunta</button>
+  <div class="mf"><button class="btn" onclick="closeM('m-cap')">Cancelar</button><button class="btn bp" onclick="guardarCap()">Guardar</button></div>
+</div>
+</div>
+
+<div class="mw" id="m-ver-cap">
+<div class="mb">
+  <div class="mh"><span class="mt" id="vct"></span><button class="xb" onclick="closeM('m-ver-cap')">×</button></div>
+  <div id="vcb"></div>
+  <div class="mf"><button class="btn" onclick="closeM('m-ver-cap')">Cerrar</button></div>
+</div>
+</div>
+
+<!-- Modal: Editar capacitación -->
+<div class="mw" id="m-edit-cap">
+<div class="mb">
+  <div class="mh"><span class="mt">Editar capacitación</span><button class="xb" onclick="closeM('m-edit-cap')">×</button></div>
+  <input type="hidden" id="ecap-id">
+  <div class="fld"><label>Título *</label><input type="text" id="ecap-tit" placeholder="Título de la capacitación"></div>
+  <div class="fld"><label>Tema</label>
+    <select id="ecap-tema">
+      <option>Esterilización por vapor</option><option>Esterilización por óxido de etileno</option>
+      <option>Esterilización por plasma</option><option>Clasificación de instrumental</option>
+      <option>Control de calidad y trazabilidad</option><option>Normas de bioseguridad</option>
+      <option>Empaque y embalaje</option><option>Mantenimiento de equipos</option>
+      <option>Normativa ANMAT / IRAM</option><option>Otro</option>
+    </select>
+  </div>
+  <div class="fld"><label>Descripción / contenido</label><textarea id="ecap-desc" rows="4" placeholder="Contenido de la capacitación..."></textarea></div>
+  <div class="g2" style="margin-bottom:0">
+    <div class="fld"><label>Duración</label><input type="text" id="ecap-dur" placeholder="Ej: 45 minutos"></div>
+    <div class="fld"><label>Vigencia (días)</label><input type="number" id="ecap-vig" min="1"></div>
+  </div>
+  <div class="hr"></div>
+  <div style="font-size:12px;font-weight:600;margin-bottom:8px">Preguntas de evaluación</div>
+  <div id="ecap-plist"></div>
+  <button class="btn bs" onclick="addEPreg()" style="margin-bottom:6px">+ Agregar pregunta</button>
+  <div class="mf">
+    <button class="btn" onclick="closeM('m-edit-cap')">Cancelar</button>
+    <button class="btn bp" onclick="guardarEditCap()">Guardar cambios</button>
+  </div>
+</div>
+</div>
+
+<div class="mw" id="m-tec">
+<div class="mb">
+  <div class="mh"><span class="mt">Agregar técnico</span><button class="xb" onclick="closeM('m-tec')">×</button></div>
+  <div class="g2" style="margin-bottom:0">
+    <div class="fld"><label>Nombre *</label><input type="text" id="tnom" placeholder="Nombre"></div>
+    <div class="fld"><label>Apellido *</label><input type="text" id="tape" placeholder="Apellido"></div>
+  </div>
+  <div class="fld"><label>Turno</label><select id="ttur"><option>Mañana</option><option>Tarde</option><option>Noche</option><option>Franquero</option></select></div>
+  <div class="mf"><button class="btn" onclick="closeM('m-tec')">Cancelar</button><button class="btn bp" onclick="guardarTec()">Agregar</button></div>
+</div>
+</div>
+
+<div class="mw" id="m-edit-tec">
+<div class="mb">
+  <div class="mh"><span class="mt">Editar técnico</span><button class="xb" onclick="closeM('m-edit-tec')">×</button></div>
+  <input type="hidden" id="eid">
+  <div class="g2" style="margin-bottom:0">
+    <div class="fld"><label>Nombre *</label><input type="text" id="enom" placeholder="Nombre"></div>
+    <div class="fld"><label>Apellido *</label><input type="text" id="eape" placeholder="Apellido"></div>
+  </div>
+  <div class="fld"><label>Turno</label><select id="etur"><option>Mañana</option><option>Tarde</option><option>Noche</option><option>Franquero</option></select></div>
+  <div class="mf"><button class="btn" onclick="closeM('m-edit-tec')">Cancelar</button><button class="btn bp" onclick="editarTec()">Guardar cambios</button></div>
+</div>
+</div>
+
+<div class="mw" id="m-ver-tec">
+<div class="mb">
+  <div class="mh"><span class="mt" id="vtt"></span><button class="xb" onclick="closeM('m-ver-tec')">×</button></div>
+  <div id="vtb"></div>
+  <div class="mf"><button class="btn" onclick="closeM('m-ver-tec')">Cerrar</button></div>
+</div>
+</div>
+
+<div class="mw" id="m-caso">
+<div class="mb">
+  <div class="mh"><span class="mt">Nuevo caso</span><button class="xb" onclick="closeM('m-caso')">×</button></div>
+  <div class="fld"><label>Título *</label><input type="text" id="kastit" placeholder="Ej: Paquete húmedo post-autoclave"></div>
+  <div class="g2" style="margin-bottom:0">
+    <div class="fld"><label>Tipo de falla</label>
+      <select id="kastipo"><option>Falla de empaque</option><option>Falla de ciclo de esterilización</option><option>Falla de indicadores / trazabilidad</option><option>Falla de clasificación de instrumental</option><option>Falla de mantenimiento de equipo</option><option>Falla de bioseguridad</option><option>Falla de almacenamiento</option><option>Falla de procedimiento operativo</option><option>Error de documentación</option><option>Otro</option></select>
+    </div>
+    <div class="fld"><label>Severidad</label><select id="kassev"><option>Alta</option><option>Media</option><option>Baja</option></select></div>
+  </div>
+  <div class="fld"><label>Descripción</label><textarea id="kasdesc" rows="2" placeholder="¿Qué ocurrió?"></textarea></div>
+  <div class="fld"><label>Causa raíz</label><textarea id="kascausa" rows="2" placeholder="¿Por qué ocurrió?"></textarea></div>
+  <div class="fld"><label>Acción correctiva</label><textarea id="kasacc" rows="2" placeholder="¿Qué se hizo?"></textarea></div>
+  <div class="fld"><label>Lección aprendida</label><textarea id="kaslec" rows="2" placeholder="¿Qué recordar siempre?"></textarea></div>
+  <div class="fld"><label>Imagen (opcional)</label>
+    <input type="file" id="kasimg" accept="image/*" onchange="prevImg(this,'kasprev')">
+    <img id="kasprev" style="display:none;max-width:100%;max-height:120px;border-radius:8px;margin-top:6px;object-fit:contain;border:1px solid #E5E4DF">
+  </div>
+  <div class="mf"><button class="btn" onclick="closeM('m-caso')">Cancelar</button><button class="btn bp" onclick="guardarCaso()">Guardar caso</button></div>
+</div>
+</div>
+
+<div class="mw" id="m-ver-caso">
+<div class="mb">
+  <div class="mh"><span class="mt" id="vkast"></span><button class="xb" onclick="closeM('m-ver-caso')">×</button></div>
+  <div id="vkasb"></div>
+  <div class="mf"><button class="btn" onclick="closeM('m-ver-caso')">Cerrar</button></div>
+</div>
+</div>
+
+<!-- Modal PIN -->
+<div class="mw" id="m-pin">
+<div class="mb" style="max-width:340px">
+  <div class="mh"><span class="mt">🔐 Acceso Farmacéutico Jefe</span><button class="xb" onclick="closeM('m-pin')">×</button></div>
+  <p style="font-size:12px;color:#7A7974;margin-bottom:1rem">Ingresá tu PIN para acceder al panel de administración.</p>
+  <div class="fld"><label>PIN de acceso</label>
+    <input type="password" id="pin-input" maxlength="6" placeholder="••••••" style="font-size:20px;letter-spacing:8px;text-align:center" onkeydown="if(event.key==='Enter')verificarPin()">
+  </div>
+  <div id="pin-error" style="color:#A32D2D;font-size:12px;margin-top:6px;display:none">PIN incorrecto. Intentá nuevamente.</div>
+  <div class="mf">
+    <button class="btn" onclick="closeM('m-pin')">Cancelar</button>
+    <button class="btn bp" onclick="verificarPin()">Ingresar</button>
+  </div>
+  <div style="margin-top:12px;padding:10px;background:#F5F4EF;border-radius:8px;font-size:11px;color:#7A7974;text-align:center">
+    PIN por defecto: <strong style="color:#1A1915">1234</strong><br>Podés cambiarlo desde el panel.
+  </div>
+</div>
+</div>
+
+<!-- Modal Cambiar PIN -->
+<div class="mw" id="m-cambiar-pin">
+<div class="mb" style="max-width:340px">
+  <div class="mh"><span class="mt">Cambiar PIN</span><button class="xb" onclick="closeM('m-cambiar-pin')">×</button></div>
+  <div class="fld"><label>PIN actual</label><input type="password" id="pin-actual" maxlength="6" placeholder="••••••" style="text-align:center;letter-spacing:6px"></div>
+  <div class="fld"><label>PIN nuevo (4-6 dígitos)</label><input type="password" id="pin-nuevo" maxlength="6" placeholder="••••••" style="text-align:center;letter-spacing:6px"></div>
+  <div class="fld"><label>Confirmar PIN nuevo</label><input type="password" id="pin-confirm" maxlength="6" placeholder="••••••" style="text-align:center;letter-spacing:6px"></div>
+  <div id="pin-cambio-msg" style="font-size:12px;margin-top:6px;display:none"></div>
+  <div class="mf">
+    <button class="btn" onclick="closeM('m-cambiar-pin')">Cancelar</button>
+    <button class="btn bp" onclick="cambiarPin()">Guardar PIN</button>
+  </div>
+</div>
+</div>
+
+<script>
+const SB_URL = "https://jmsytxdvpvehaplbpjwm.supabase.co";
+const SB_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imptc3l0eGR2cHZlaGFwbGJwandtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc0OTI5MzgsImV4cCI6MjA5MzA2ODkzOH0.zbzEKh1jYgUjZi3ACjY4yT4awu0nP1CbeeqtBB6OM20";
+
+// ── Supabase helpers ──────────────────────────────────────
+const H = { apikey: SB_KEY, Authorization: `Bearer ${SB_KEY}`, 'Content-Type': 'application/json' };
+
+async function sbAll(t, extra='') {
+  const r = await fetch(`${SB_URL}/rest/v1/${t}?order=created_at.asc${extra}`, { headers: H });
+  return r.ok ? r.json() : [];
+}
+async function sbInsert(t, d) {
+  const r = await fetch(`${SB_URL}/rest/v1/${t}`, {
+    method:'POST', headers:{...H, Prefer:'return=representation'}, body:JSON.stringify(d)
+  });
+  const j = await r.json(); return Array.isArray(j) ? j[0] : j;
+}
+async function sbUpdate(t, id, d) {
+  await fetch(`${SB_URL}/rest/v1/${t}?id=eq.${id}`, { method:'PATCH', headers:H, body:JSON.stringify(d) });
+}
+async function sbDel(t, id) {
+  await fetch(`${SB_URL}/rest/v1/${t}?id=eq.${id}`, { method:'DELETE', headers:H });
+}
+async function sbDelWhere(t, col, val) {
+  await fetch(`${SB_URL}/rest/v1/${t}?${col}=eq.${val}`, { method:'DELETE', headers:H });
+}
+
+// PIN en localStorage (solo para el jefe, local)
+const getPin = () => localStorage.getItem('fav_pin') || '1234';
+function genId() { return Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
+
+// ── Estado global ─────────────────────────────────────────
+const D = { caps:[], tecs:[], casos:[], logs:[], res:{}, asist:{}, historial:[] };
+let rol = 'tecnico';
+let tecActivo = null;
+let pregBuf = [];
+let QZ = { on:false, cid:null, qi:0, ans:[], done:false, score:0, ok:0 };
+
+const TIPOS = ['Falla de empaque','Falla de ciclo de esterilización','Falla de indicadores / trazabilidad',
+  'Falla de clasificación de instrumental','Falla de mantenimiento de equipo','Falla de bioseguridad',
+  'Falla de almacenamiento','Falla de procedimiento operativo','Error de documentación','Otro'];
+const TB = {'Esterilización por vapor':'bblue','Esterilización por óxido de etileno':'bwarn',
+  'Esterilización por plasma':'bblue','Clasificación de instrumental':'bgray',
+  'Control de calidad y trazabilidad':'bok','Normas de bioseguridad':'bdanger',
+  'Empaque y embalaje':'bgray','Mantenimiento de equipos':'bwarn','Normativa ANMAT / IRAM':'bteal','Otro':'bgray'};
+const KB = {'Falla de empaque':'bcoral','Falla de ciclo de esterilización':'bdanger',
+  'Falla de indicadores / trazabilidad':'bwarn','Falla de clasificación de instrumental':'bgray',
+  'Falla de mantenimiento de equipo':'bwarn','Falla de bioseguridad':'bdanger',
+  'Falla de almacenamiento':'bpurple','Falla de procedimiento operativo':'bcoral',
+  'Error de documentación':'bgray','Otro':'bgray'};
+
+const ini  = (n,a) => ((n||'')[0]||'').toUpperCase()+((a||'')[0]||'').toUpperCase();
+const hoy  = ()    => new Date().toISOString().split('T')[0];
+const sumd = (d,n) => { const x=new Date(d); x.setDate(x.getDate()+n); return x.toISOString().split('T')[0]; };
+const difd = (a,b) => Math.round((new Date(b)-new Date(a))/86400000);
+const $    = id    => document.getElementById(id);
+
+async function flog(txt) {
+  const f = new Date().toLocaleDateString('es-AR')+' '+new Date().toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
+  D.logs.unshift({txt,f});
+  if(D.logs.length>40) D.logs.pop();
+  sbInsert('logs',{txt,f}).catch(()=>{});
+}
+
+// ── Carga inicial ─────────────────────────────────────────
+async function cargar() {
+  const [caps,tecs,casos,logs,resRows,asistRows,histRows] = await Promise.all([
+    sbAll('caps'), sbAll('tecs'), sbAll('casos'), sbAll('logs'),
+    sbAll('resultados'), sbAll('asistencias'), sbAll('historial')
+  ]);
+  D.caps  = caps.map(c=>({...c, desc:c.contenido||'', preguntas: (() => { try { return typeof c.preguntas==='string' ? JSON.parse(c.preguntas||'[]') : (c.preguntas||[]); } catch(e){ return []; } })() }));
+  D.tecs  = tecs;
+  D.casos = casos.map(c=>({...c, desc:c.contenido||''}));
+  D.logs  = logs;
+  D.res   = {};
+  resRows.forEach(r=>{ D.res[r.clave]=r.valor; if(r.fecha) D.res[r.clave+'_f']=r.fecha; });
+  D.asist = {};
+  asistRows.forEach(a=>{ if(!D.asist[a.clave]) D.asist[a.clave]={}; D.asist[a.clave][a.tid]=a.val; });
+  D.historial = histRows || [];
+}
+
+// ── Seed (primera vez) ────────────────────────────────────
+async function seed() {
+  const check = await sbAll('caps');
+  if(check.length > 0) return;
+
+  $('ls').innerHTML='<div style="text-align:center"><div class="ll">FF</div><strong style="font-size:15px">Cargando datos iniciales...</strong><p style="font-size:12px;color:#7A7974;margin-top:.5rem">Primera vez — esto tarda un momento</p></div>';
+
+  const nombres=[
+    ['Ana Laura','García'],['Carlos','López'],['María José','Fernández'],['Juan Pablo','Martínez'],
+    ['Laura','Rodríguez'],['Diego','Sánchez'],['Valeria','Gómez'],['Marcos','Pérez'],
+    ['Sofía','González'],['Nicolás','Herrera'],['Claudia','Torres'],['Roberto','Díaz'],
+    ['Patricia','Medina'],['Sebastián','Ruiz'],['Gabriela','Moreno'],['Fernando','Jiménez'],
+    ['Natalia','Castro'],['Alejandro','Romero'],['Cecilia','Vargas'],['Hugo','Navarro'],
+    ['Daniela','Ramos'],['Gustavo','Reyes'],['Verónica','Cruz'],['Pablo','Flores'],
+    ['Mariana','Ortega'],['Ricardo','Molina'],['Luciana','Silva'],['Emilio','Guerrero'],
+    ['Silvana','Mendoza'],['Ezequiel','Ríos']
+  ];
+  for(let i=0;i<nombres.length;i++){
+    const t={nombre:nombres[i][0],apellido:nombres[i][1],turno:['Mañana','Tarde','Noche'][i%3]};
+    const r=await sbInsert('tecs',t); D.tecs.push({...t,id:r.id});
+  }
+
+  const capsData=[
+    {titulo:'Ciclos de esterilización por vapor saturado — Autoclave clase B',tema:'Esterilización por vapor',dur:'60 min',vig:365,
+     contenido:'Fundamentos del vapor saturado. Ciclos 134°C/18 min y 121°C/15 min. Parámetros críticos: temperatura, presión y tiempo. Validación de cargas, trazabilidad y liberación de lotes. Interpretación de impresiones del autoclave clase B.',
+     preguntas:[
+       {txt:'¿Temperatura y tiempo del ciclo rápido estándar?',opts:['121°C/30 min','134°C/18 min','150°C/10 min','100°C/60 min'],ok:1},
+       {txt:'¿Porcentaje máximo de carga recomendado?',opts:['50%','75%','90%','100%'],ok:1},
+       {txt:'¿Qué documento acompaña obligatoriamente cada carga?',opts:['Solo la fecha','Registro del ciclo con parámetros y firma','Nombre del técnico','Número de serie del equipo'],ok:1},
+       {txt:'¿Qué indica "clase B" en un autoclave?',opts:['Básico','Biológico','Procesa cargas huecas y porosas','Baja presión'],ok:2}
+     ]},
+    {titulo:'Esterilización por óxido de etileno (ETO) — Procedimientos y seguridad',tema:'Esterilización por óxido de etileno',dur:'75 min',vig:365,
+     contenido:'Mecanismo de acción del ETO. Parámetros: concentración, temperatura, humedad y tiempo. Desgasificación y aireación post-ciclo. EPP obligatorio, ventilación y monitoreo ambiental. Normativa ANMAT para ETO.',
+     preguntas:[
+       {txt:'Tiempo mínimo de aireación post-ETO antes del uso clínico:',opts:['1 hora','8 horas','12 h a 50°C ó 24 h a temperatura ambiente','30 minutos'],ok:2},
+       {txt:'EPP mínimo obligatorio para operar el equipo de ETO:',opts:['Solo guantes de látex','Guantes nitrilo + máscara filtro ETO + camisolín + protección ocular','Solo barbijo quirúrgico','No requiere EPP'],ok:1},
+       {txt:'¿Por qué evitar el ETO en polietileno de baja densidad?',opts:['Por costo','Absorbe y retiene el gas siendo tóxico','No compatible con plásticos','Los daña visualmente'],ok:1}
+     ]},
+    {titulo:'Esterilización por plasma de peróxido de hidrógeno',tema:'Esterilización por plasma',dur:'50 min',vig:365,
+     contenido:'Principio del plasma de H₂O₂. Ciclos estándar, avanzado y flexible. Materiales compatibles e incompatibles. Indicadores internos y externos. Ventajas: no tóxico, ciclo corto, sin aireación.',
+     preguntas:[
+       {txt:'Material NO compatible con plasma:',opts:['Acero inoxidable','Instrumental con lumen menor a 1 mm','Tijeras de titanio','Endoscopios rígidos'],ok:1},
+       {txt:'Ventaja principal del plasma vs ETO:',opts:['Es más económico','No genera residuos tóxicos ni requiere aireación','Es siempre más rápido','Puede esterilizar líquidos'],ok:1},
+       {txt:'Si el ciclo de plasma se interrumpe:',opts:['Liberar si pasó el 80%','Reprocesar todo el lote desde el inicio','Solo re-esterilizar mayor riesgo','Usar dentro de 24 h'],ok:1}
+     ]},
+    {titulo:'Clasificación de instrumental quirúrgico según Spaulding',tema:'Clasificación de instrumental',dur:'45 min',vig:365,
+     contenido:'Clasificación de Spaulding: crítico, semicrítico y no crítico. Selección del método según clasificación. Recepción: conteo, verificación funcional y detección de defectos. Manejo de instrumental contaminado.',
+     preguntas:[
+       {txt:'Categoría Spaulding para pinza que contacta tejido estéril:',opts:['No crítico','Semicrítico','Crítico','Ninguna'],ok:2},
+       {txt:'Si al recibir instrumental se detecta corrosión visible:',opts:['Procesarla si es pequeña','Rechazarla, registrarla y reportar para baja o reparación','Limpiarla con ácido','Esterilizarla e informar al quirófano'],ok:1},
+       {txt:'Primer paso al recibir instrumental contaminado:',opts:['Sumergir en agua caliente','Contar y verificar integridad con EPP adecuado','Lavarlo sin guantes','Guardarlo hasta acumular cantidad'],ok:1}
+     ]},
+    {titulo:'Control de calidad, trazabilidad y liberación de lotes',tema:'Control de calidad y trazabilidad',dur:'90 min',vig:180,
+     contenido:'Trazabilidad: identificación de lotes y registros. Indicadores físicos, químicos (clase 1-6) y biológicos. Test de Bowie-Dick. Criterios de liberación y retención. Auditoría y registro según ANMAT.',
+     preguntas:[
+       {txt:'Indicador biológico para validar esterilización por vapor:',opts:['Bacillus anthracis','Geobacillus stearothermophilus','Clostridium botulinum','Staphylococcus aureus'],ok:1},
+       {txt:'Frecuencia mínima del test de Bowie-Dick en autoclave clase B:',opts:['Mensualmente','Semanalmente','Al inicio de cada jornada','Anualmente'],ok:2},
+       {txt:'Indicador biológico positivo — ¿qué hacer?',opts:['Ignorar si los químicos fueron correctos','Retener todos los lotes desde el último negativo e investigar','Repetir 3 veces antes de actuar','Solo informar al jefe'],ok:1},
+       {txt:'Información mínima obligatoria en el rótulo:',opts:['Solo la fecha','Contenido, fecha, lote, equipo y responsable','Solo el nombre del técnico','Fecha y firma'],ok:1}
+     ]},
+    {titulo:'Normas de bioseguridad en central de esterilización',tema:'Normas de bioseguridad',dur:'60 min',vig:180,
+     contenido:'EPP por área: zona sucia, limpia y estéril. Accidente biológico: pasos inmediatos y reporte. Circuito sucio/limpio y flujo unidireccional. Higiene de manos. Residuos patológicos. Vacunación del personal.',
+     preguntas:[
+       {txt:'EPP mínimo en el área de lavado de instrumental:',opts:['Solo guantes de látex','Guantes resistentes + camisolín impermeable + barbijo + protección ocular','Solo barbijo','Ninguno si no es infeccioso'],ok:1},
+       {txt:'Primer paso ante pinchazo con aguja posiblemente contaminada:',opts:['Aspirar la herida con la boca','Lavar con agua y jabón 5 min, dejar sangrar y reportar inmediatamente','Desinfectar con alcohol y continuar','Esperar fin del turno'],ok:1},
+       {txt:'¿Cuándo se cambian los guantes de goma del área sucia?',opts:['Diariamente','Cuando presentan deterioro, pinchadura o rotura','Mensualmente','Semanalmente'],ok:1}
+     ]},
+    {titulo:'Empaque, sellado y rotulado de instrumental',tema:'Empaque y embalaje',dur:'55 min',vig:365,
+     contenido:'Tipos de empaques: papel grado médico, pouch, TNT, contenedores rígidos. Técnicas de doblado. Sellado térmico: temperatura, presión y margen mínimo. Rotulado obligatorio. Verificación de integridad post-esterilización.',
+     preguntas:[
+       {txt:'Margen de sellado mínimo en pouch papel-plástico:',opts:['3 mm','6 mm','1 cm','2 cm'],ok:1},
+       {txt:'¿Qué verificar en el sello antes de esterilizar?',opts:['Solo que no tenga burbujas','Sello continuo, sin arrugas ni canales, margen mínimo de 6 mm','Solo que la fecha sea legible','Que el plástico sea transparente'],ok:1},
+       {txt:'El paquete se considera no estéril cuando:',opts:['Siempre a los 30 días','Presenta humedad, rotura, perforación o cayó al suelo','Solo al vencer 1 año','Nunca si fue bien esterilizado'],ok:1}
+     ]},
+    {titulo:'Mantenimiento preventivo de equipos de esterilización',tema:'Mantenimiento de equipos',dur:'45 min',vig:365,
+     contenido:'Plan de mantenimiento preventivo: registros, frecuencias y responsables. Verificaciones diarias: sellos, trampas de vapor, filtros, impresora. Detección de anomalías. Calibración anual certificada.',
+     preguntas:[
+       {txt:'Frecuencia mínima del mantenimiento preventivo certificado:',opts:['Cada 5 años','Anualmente por técnico certificado','Cada 6 meses','Mensualmente'],ok:1},
+       {txt:'Alarma de falla en trampa de vapor durante un ciclo:',opts:['Completar el ciclo e informar después','Detener el equipo, no liberar el lote y llamar al servicio técnico','Reiniciar el ciclo','Cambiar la trampa durante el ciclo'],ok:1},
+       {txt:'Verificación diaria obligatoria antes de operar el autoclave:',opts:['Solo revisar nivel de agua','Nivel de agua, presión en frío, sellos, papel de impresora y registro del turno previo','Solo que no haya alarmas','Solo revisar la impresora'],ok:1}
+     ]},
+    {titulo:'Normativa ANMAT e IRAM aplicada a esterilización hospitalaria',tema:'Normativa ANMAT / IRAM',dur:'70 min',vig:365,
+     contenido:'Marco normativo: Disposición ANMAT 2318/02. Normas IRAM-ISO 17665, 11135, 11137. Habilitación de la central. Documentación obligatoria. Responsabilidades del farmacéutico jefe.',
+     preguntas:[
+       {txt:'Norma IRAM-ISO de referencia para esterilización por vapor:',opts:['IRAM-ISO 11135','IRAM-ISO 17665','IRAM-ISO 11137','IRAM-ISO 13485'],ok:1},
+       {txt:'Responsabilidad del farmacéutico jefe según ANMAT:',opts:['Solo supervisar stock','Avalar liberación de lotes, garantizar BPF y capacitación del personal','Solo mantenimiento','No tiene responsabilidad diferenciada'],ok:1},
+       {txt:'Tiempo mínimo de conservación de registros de esterilización:',opts:['1 año','5 años como mínimo','Vida del paciente o 10 años lo que sea mayor','Solo 6 meses'],ok:2}
+     ]}
+  ];
+
+  for(const c of capsData){
+    const row = await sbInsert('caps',{titulo:c.titulo,tema:c.tema,contenido:c.contenido,dur:c.dur,vig:c.vig,fecha:hoy(),img:null,preguntas:JSON.stringify(c.preguntas)});
+    D.caps.push({...c, id:row.id, desc:c.contenido, fecha:hoy(), img:null});
+  }
+
+  const casosData=[
+    {titulo:'Paquete húmedo post-autoclave en set de cirugía abdominal',tipo:'Falla de empaque',sev:'Alta',fecha:'2025-02-10',
+     contenido:'Al finalizar ciclo 134°C/18 min se detectaron 3 paquetes con humedad visible. Eran paquetes de tela de algodón en la fila inferior.',
+     causa:'Sobrecarga de la cámara al 95%. Los paquetes tocaban la pared metálica que condensa vapor. No se respetó el tiempo de secado.',
+     accion:'Rechazo y reproceso del lote. Cartel de capacidad máxima en el equipo. Registro fotográfico de carga antes de cada ciclo.',
+     leccion:'Nunca superar el 75% de la capacidad. Dejar espacio entre paquetes. Respetar 30 min de secado. Los paquetes nunca deben tocar las paredes.'},
+    {titulo:'Rotura de sello en pouch durante transporte al quirófano',tipo:'Falla de empaque',sev:'Media',fecha:'2025-02-18',
+     contenido:'Pouch con sellado inferior abierto detectado en quirófano antes de cirugía de cadera. Instrumental reemplazado de urgencia.',
+     causa:'Selladora sin calibrar, temperatura insuficiente. El sello tenía canales microscópicos no detectados en la inspección visual.',
+     accion:'Calibración inmediata de la selladora. Control diario del sello con tiras de prueba.',
+     leccion:'Verificar temperatura de selladora al inicio de cada turno. Ante dudas, reprocesar.'},
+    {titulo:'Ciclo de autoclave con parámetros fuera de rango',tipo:'Falla de ciclo de esterilización',sev:'Alta',fecha:'2025-03-05',
+     contenido:'La impresión registró 132°C/12 min en lugar de 134°C/18 min. El técnico liberó el lote sin revisar la impresión.',
+     causa:'Falla en electroválvula no detectada. No se revisó la impresión del ciclo antes de la liberación.',
+     accion:'Retención y reproceso del lote. Mantenimiento correctivo. Firma obligatoria tras verificar impresión.',
+     leccion:'SIEMPRE revisar la impresión antes de liberar cualquier lote. Un ciclo no verificado no es un ciclo válido.'},
+    {titulo:'Indicador químico clase 4 sin viraje completo',tipo:'Falla de indicadores / trazabilidad',sev:'Alta',fecha:'2025-03-12',
+     contenido:'Paquete liberado con indicador interno clase 4 con viraje solo parcial. El paquete ya estaba en depósito.',
+     causa:'El indicador pertenecía a un lote vencido hace 2 meses. No se controlaba la fecha de vencimiento de insumos.',
+     accion:'Recuperación y reproceso del lote. Control de fecha de vencimiento como paso obligatorio del turno.',
+     leccion:'Los indicadores vencidos dan resultados falsos. Revisar fechas al inicio de cada turno. Sistema PEPS para el stock.'},
+    {titulo:'Instrumental con materia orgánica post-lavado',tipo:'Falla de procedimiento operativo',sev:'Media',fecha:'2025-03-20',
+     contenido:'Pinza Kocher con tejido orgánico en las estrías detectada bajo luz LED en zona de empaque.',
+     causa:'Instrumental lavado cerrado sin abrir completamente las cremalleras.',
+     accion:'Retiro y reproceso. Capacitación práctica en cepillado de instrumentos articulados.',
+     leccion:'Todo instrumental articulado debe abrirse al máximo durante el lavado. La esterilización no elimina suciedad visible.'},
+    {titulo:'Accidente punzocortante por aguja sin descartar en set',tipo:'Falla de bioseguridad',sev:'Alta',fecha:'2025-03-28',
+     contenido:'Técnica pinchada en el índice al manipular instrumental del quirófano con una aguja de sutura sin enfundar entre las pinzas.',
+     causa:'El equipo de quirófano no descartó la aguja. La técnica no usaba guantes resistentes al corte.',
+     accion:'Protocolo de accidente biológico activado: lavado, reporte a salud ocupacional, profilaxis.',
+     leccion:'Usar siempre guantes resistentes a cortes en área sucia. Nunca revisar instrumental a mano desnuda.'},
+    {titulo:'Material estéril dañado por condensación del aire acondicionado',tipo:'Falla de almacenamiento',sev:'Media',fecha:'2025-04-02',
+     contenido:'12 paquetes con manchas de humedad detectados luego de 3 días almacenados bajo un caño de A/C con condensación.',
+     causa:'Caño de A/C con goteo intermitente. Sin control periódico de condiciones del depósito.',
+     accion:'Descarte y reproceso. Reparación del A/C. Control diario de temperatura y humedad.',
+     leccion:'El depósito debe mantenerse entre 18-22°C y 35-50% de humedad. Todo paquete con humedad es no estéril.'},
+    {titulo:'Número de lote duplicado en dos cargas distintas',tipo:'Error de documentación',sev:'Media',fecha:'2025-04-10',
+     contenido:'Auditoría detectó el lote 2847 asignado a dos cargas diferentes, imposibilitando la trazabilidad.',
+     causa:'Error de transcripción manual. Sin sistema de validación automática de números de lote.',
+     accion:'Corrección del registro histórico. Numeración correlativa automática. Auditoría de los últimos 60 días.',
+     leccion:'Los registros de lote son la última defensa de trazabilidad. Nunca reutilizar un número de lote.'}
+  ];
+
+  for(const c of casosData){
+    const row = await sbInsert('casos',{titulo:c.titulo,tipo:c.tipo,sev:c.sev,contenido:c.contenido,causa:c.causa,accion:c.accion,leccion:c.leccion,img:null,fecha:c.fecha});
+    D.casos.push({...c, id:row.id, desc:c.contenido, img:null});
+  }
+
+  await flog('Sistema inicializado con datos de ejemplo');
+}
+
+// ── PIN ───────────────────────────────────────────────────
+window.pedirPin = () => {
+  const pi=$('pin-input'); if(pi) pi.value='';
+  const er=$('pin-error'); if(er) er.style.display='none';
+  openM('m-pin');
+  setTimeout(()=>{ const i=$('pin-input'); if(i) i.focus(); },200);
+};
+window.verificarPin = () => {
+  if($('pin-input').value.trim()===getPin()){ closeM('m-pin'); setRol('jefe',$('rb-jefe')); }
+  else { $('pin-error').style.display='block'; $('pin-input').value=''; $('pin-input').focus(); }
+};
+window.cambiarPin = () => {
+  const actual=$('pin-actual').value.trim(), nuevo=$('pin-nuevo').value.trim(), conf=$('pin-confirm').value.trim();
+  const msg=$('pin-cambio-msg');
+  if(actual!==getPin()){ msg.style.display='block';msg.style.color='#A32D2D';msg.textContent='PIN actual incorrecto.';return; }
+  if(nuevo.length<4){ msg.style.display='block';msg.style.color='#A32D2D';msg.textContent='El PIN debe tener al menos 4 dígitos.';return; }
+  if(nuevo!==conf){ msg.style.display='block';msg.style.color='#A32D2D';msg.textContent='Los PINs nuevos no coinciden.';return; }
+  localStorage.setItem('fav_pin',nuevo);
+  msg.style.display='block';msg.style.color='#27500A';msg.textContent='✓ PIN cambiado correctamente.';
+  setTimeout(()=>{ closeM('m-cambiar-pin'); ['pin-actual','pin-nuevo','pin-confirm'].forEach(i=>{const el=$(i);if(el)el.value='';}); msg.style.display='none'; },1500);
+};
+window.cerrarSesionJefe = () => setRol('tecnico',$('rb-tec'));
+
+// ── Roles y tabs ──────────────────────────────────────────
+const openM  = id => $(id).classList.add('on');
+const closeM = id => $(id).classList.remove('on');
+window.openM=openM; window.closeM=closeM;
+
+window.prevImg = (inp,pid) => {
+  const el=$(pid);
+  if(inp.files&&inp.files[0]){ const r=new FileReader(); r.onload=e=>{el.src=e.target.result;el.style.display='block'}; r.readAsDataURL(inp.files[0]); }
+};
+
+window.setRol = (r,el) => {
+  rol=r;
+  document.querySelectorAll('.rbtn').forEach(b=>b.classList.remove('on')); el.classList.add('on');
+  $('tabs-jefe').style.display=r==='jefe'?'block':'none';
+  $('tabs-tec').style.display=r==='tecnico'?'block':'none';
+  $('tec-sel-wrap').style.display=r==='tecnico'?'block':'none';
+  $('bell-btn').style.display=r==='jefe'?'flex':'none';
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  if(r==='jefe'){
+    $('s-dash').classList.add('on');
+    document.querySelectorAll('#tabs-jefe .tab').forEach((t,i)=>t.classList.toggle('on',i===0));
+    rdDash();
+  } else {
+    $('s-ti').classList.add('on');
+    document.querySelectorAll('#tabs-tec .tab').forEach((t,i)=>t.classList.toggle('on',i===0));
+    updTecSel(); rdTecInicio();
+  }
+};
+
+window.showTab = (id,el) => {
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('#tabs-jefe .tab').forEach(b=>b.classList.remove('on'));
+  $('s-'+id).classList.add('on'); el.classList.add('on');
+  if(id==='dash')rdDash(); if(id==='caps')rdCaps();
+  if(id==='tecs')rdTecs(); if(id==='casos')rdCasos(); if(id==='reps')rdReps();
+};
+window.showTabT = (id,el) => {
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('#tabs-tec .tab').forEach(b=>b.classList.remove('on'));
+  $('s-'+id).classList.add('on'); el.classList.add('on');
+  if(id==='ti')rdTecInicio(); if(id==='tq') QZ.on?rdQuiz():rdQuizSel();
+  if(id==='tc')rdCasosT(); if(id==='th')rdTecHist();
+};
+
+function updSelects(){
+  const s=$('asel'); const v=s.value;
+  s.innerHTML='<option value="">Seleccioná...</option>'+D.caps.map(c=>`<option value="${c.id}">${c.titulo}</option>`).join('');
+  if(v) s.value=v;
+  ['ftipo','rtipo','tftipo'].forEach(id=>{ const el=$(id); if(!el)return; const vv=el.value; el.innerHTML='<option value="">Todos</option>'+TIPOS.map(t=>`<option>${t}</option>`).join(''); if(vv)el.value=vv; });
+}
+function updTecSel(){
+  const s=$('tec-sel'); const v=s.value;
+  s.innerHTML='<option value="">Seleccioná tu nombre...</option>'+D.tecs.map(t=>`<option value="${t.id}">${t.nombre} ${t.apellido} (${t.turno})</option>`).join('');
+  if(v) s.value=v;
+}
+window.setTecLogin = () => { tecActivo=$('tec-sel').value||null; rdTecInicio(); rdTecHist(); rdCasosT(); };
+
+// ── Alertas ───────────────────────────────────────────────
+function getAlertas(){
+  const h=hoy(); const out=[];
+  D.tecs.forEach(t=>D.caps.forEach(c=>{
+    const r=D.res[c.id+'-'+t.id]; const fr=D.res[c.id+'-'+t.id+'_f'];
+    if(r===undefined||!fr)return;
+    const vence=sumd(fr,c.vig||365); const dias=difd(h,vence);
+    if(dias<0) out.push({tipo:'vencida',tec:t,cap:c,dias:Math.abs(dias)});
+    else if(dias<=30) out.push({tipo:'proxima',tec:t,cap:c,dias});
+  }));
+  return out;
+}
+window.togNotif = () => {
+  const w=$('notif-wrap'); w.style.display=w.style.display==='none'?'block':'none';
+  if(w.style.display==='block'){
+    const al=getAlertas(); const el=$('notif-inner');
+    if(!al.length){el.innerHTML='<div style="font-size:12px;color:#7A7974;text-align:center">Sin alertas activas.</div>';return;}
+    const v=al.filter(a=>a.tipo==='vencida'); const p=al.filter(a=>a.tipo==='proxima');
+    el.innerHTML=(v.length?`<div style="font-size:12px;font-weight:600;color:#791F1F;margin-bottom:6px">Vencidas (${v.length})</div>`+v.map(a=>`<div class="li"><div class="lm"><div class="lt">${a.tec.nombre} ${a.tec.apellido}</div><div class="ls">${a.cap.titulo} — venció hace ${a.dias} días</div></div><span class="badge bdanger">Vencida</span></div>`).join(''):'')+
+    (p.length?`<div style="font-size:12px;font-weight:600;color:#633806;margin:8px 0 6px">Por vencer (${p.length})</div>`+p.map(a=>`<div class="li"><div class="lm"><div class="lt">${a.tec.nombre} ${a.tec.apellido}</div><div class="ls">${a.cap.titulo} — vence en ${a.dias} días</div></div><span class="badge bwarn">Por vencer</span></div>`).join(''):'' );
+  }
+};
+
+// ── Dashboard ─────────────────────────────────────────────
+function rdDash(){
+  $('mc').textContent=D.caps.length; $('mt').textContent=D.tecs.length; $('mk').textContent=D.casos.length;
+  let tot=0,cnt=0; D.caps.forEach(c=>D.tecs.forEach(t=>{const r=D.res[c.id+'-'+t.id];if(r!==undefined){tot+=r;cnt++;}}));
+  $('mp').textContent=cnt?Math.round(tot/cnt)+'%':'—';
+  const al=getAlertas(); $('bdot').classList.toggle('on',al.length>0);
+  const v=al.filter(a=>a.tipo==='vencida').length, p=al.filter(a=>a.tipo==='proxima').length;
+  $('da').innerHTML=(v?`<div class="ae" style="display:flex;justify-content:space-between;align-items:center"><span>${v} capacitación(es) vencida(s)</span><button class="btn bs" onclick="togNotif()">Ver</button></div>`:'')+(p?`<div class="aw" style="display:flex;justify-content:space-between;align-items:center"><span>${p} técnico(s) con capacitaciones por vencer</span><button class="btn bs" onclick="togNotif()">Ver</button></div>`:'');
+  $('dp').innerHTML=D.caps.length?D.caps.map(c=>{ const comp=D.tecs.filter(t=>D.res[c.id+'-'+t.id]!==undefined).length; const pct=D.tecs.length?Math.round(comp/D.tecs.length*100):0; return`<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;margin-bottom:3px"><span style="font-size:11px">${c.titulo}</span><span style="font-size:10px;color:#7A7974">${comp}/${D.tecs.length} — ${pct}%</span></div><div class="pb"><div class="pf" style="width:${pct}%"></div></div></div>`; }).join(''):'<div class="empty">Sin capacitaciones.</div>';
+  const cnt2={}; TIPOS.forEach(t=>cnt2[t]=0); D.casos.forEach(c=>{if(cnt2[c.tipo]!==undefined)cnt2[c.tipo]++;});
+  const act=TIPOS.filter(t=>cnt2[t]>0); const mx=act.length?Math.max(...act.map(t=>cnt2[t]),1):1;
+  $('dc').innerHTML=act.length?act.map(t=>`<div class="br"><div class="bl">${t.replace('Falla de ','')}</div><div class="bb"><div class="bf" style="width:${Math.round(cnt2[t]/mx*100)}%"></div></div><div class="bv">${cnt2[t]}</div></div>`).join(''):'<div class="empty">Sin casos.</div>';
+  $('dac').innerHTML=D.logs.length?D.logs.slice(0,7).map(a=>`<div class="li"><div class="lm"><div class="lt">${a.txt}</div><div class="ls">${a.f}</div></div></div>`).join(''):'<div class="empty">Sin actividad.</div>';
+}
+
+// ── Capacitaciones ────────────────────────────────────────
+function rdCaps(){
+  const el=$('cap-list'); const h=hoy();
+  el.innerHTML=D.caps.length?D.caps.map(c=>{ const comp=D.tecs.filter(t=>D.res[c.id+'-'+t.id]!==undefined).length; const venc=D.tecs.filter(t=>{const f=D.res[c.id+'-'+t.id+'_f'];return f&&difd(h,sumd(f,c.vig||365))<0}).length;
+    return`<div class="cc"><div style="display:flex;align-items:flex-start;gap:10px">
+      ${c.img?`<img src="${c.img}" style="width:50px;height:50px;object-fit:cover;border-radius:8px;flex-shrink:0;border:1px solid #E5E4DF">`:''}
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:4px">
+          <span style="font-size:13px;font-weight:600">${c.titulo}</span>
+          <span class="badge ${TB[c.tema]||'bgray'}">${c.tema}</span>
+          ${venc?`<span class="badge bdanger">${venc} vencidas</span>`:''}
+        </div>
+        <div style="font-size:11px;color:#7A7974;margin-bottom:4px">${(c.desc||'').slice(0,90)}${(c.desc||'').length>90?'...':''}</div>
+        <div style="font-size:10px;color:#7A7974">Dur: ${c.dur||'—'} · Preguntas: ${(c.preguntas||[]).length} · Vigencia: ${c.vig||365}d · Completaron: ${comp}/${D.tecs.length}</div>
+      </div>
+      <div style="display:flex;gap:5px;flex-shrink:0">
+        <button class="btn bs" onclick="verCap('${c.id}')">Ver</button>
+        <button class="btn bs" onclick="editCap('${c.id}')">Editar</button>
+        <button class="btn bs bd" onclick="elimCap('${c.id}')">×</button>
+      </div>
+    </div></div>`; }).join(''):'<div class="empty">No hay capacitaciones. Creá la primera.</div>';
+}
+
+// ── Técnicos ──────────────────────────────────────────────
+window.rdTecs = () => {
+  const ft=$('ft').value; const tecs=ft?D.tecs.filter(t=>t.turno===ft):D.tecs;
+  const el=$('tec-list');
+  el.innerHTML=tecs.length?`<div class="card">`+tecs.map(t=>{ const comp=D.caps.filter(c=>D.res[c.id+'-'+t.id]!==undefined).length; const pct=D.caps.length?Math.round(comp/D.caps.length*100):0;
+    return`<div class="li"><div class="av">${ini(t.nombre,t.apellido)}</div>
+      <div class="lm"><div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap"><span class="lt">${t.nombre} ${t.apellido}</span><span class="badge bgray">${t.turno}</span></div>
+        <div style="display:flex;align-items:center;gap:6px;margin-top:3px"><div class="pb" style="flex:1;max-width:130px"><div class="pf" style="width:${pct}%"></div></div><span style="font-size:10px;color:#7A7974">${comp}/${D.caps.length}</span></div>
+      </div>
+      <div style="display:flex;gap:5px">
+        <button class="btn bs" onclick="verTec('${t.id}')">Ver</button>
+        <button class="btn bs" onclick="editTec('${t.id}')">Editar</button>
+        <button class="btn bs bd" onclick="elimTec('${t.id}')">×</button>
+      </div></div>`; }).join('')+'</div>':'<div class="empty">Sin técnicos.</div>';
+};
+
+// ── Asistencia ────────────────────────────────────────────
+window.rdAsist = () => {
+  const cid=$('asel').value; const fec=$('afec').value; const panel=$('asist-panel');
+  if(!cid||!fec){panel.innerHTML='<div class="card"><div class="empty">Seleccioná capacitación y fecha.</div></div>';return;}
+  const key=cid+'-'+fec;
+  if(!D.asist[key]) D.asist[key]={};
+  const pres=Object.values(D.asist[key]).filter(v=>v==='P').length;
+  panel.innerHTML=`<div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.875rem;flex-wrap:wrap;gap:6px">
+      <span style="font-size:13px;font-weight:600">Presentes: ${pres} / ${D.tecs.length}</span>
+      <div style="display:flex;gap:5px">
+        <button class="btn bs" onclick="mTodos('${key}','P')">Todos presentes</button>
+        <button class="btn bs" onclick="mTodos('${key}','')">Limpiar</button>
+        <button class="btn bg bs" onclick="expAsistF('${cid}','${fec}')">⬇ Exportar</button>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:5px">
+      ${D.tecs.map(t=>{const v=D.asist[key][t.id]||'';return`<div onclick="togA('${key}','${t.id}')" style="padding:6px;border:1px solid ${v==='P'?'#3B6D11':v==='A'?'#A32D2D':'#E5E4DF'};border-radius:8px;font-size:10px;cursor:pointer;text-align:center;line-height:1.4;background:${v==='P'?'#EAF3DE':v==='A'?'#FCEBEB':'#F5F4EF'};color:${v==='P'?'#27500A':v==='A'?'#791F1F':'#7A7974'};font-weight:${v==='P'?'600':'normal'}">${t.nombre}<br>${t.apellido}</div>`;}).join('')}
+    </div>
+  </div>`;
+};
+window.togA = async (key,tid) => {
+  if(!D.asist[key]) D.asist[key]={};
+  const c=D.asist[key][tid]; const nv=c==='P'?'A':c==='A'?'':'P'; D.asist[key][tid]=nv;
+  await sbDelWhere('asistencias','clave',key+'-'+tid).catch(()=>{});
+  await fetch(`${SB_URL}/rest/v1/asistencias?clave=eq.${key}&tid=eq.${tid}`,{method:'DELETE',headers:H}).catch(()=>{});
+  if(nv) await sbInsert('asistencias',{clave:key,tid,val:nv}).catch(()=>{});
+  rdAsist();
+};
+window.mTodos = async (key,val) => {
+  if(!D.asist[key]) D.asist[key]={};
+  for(const t of D.tecs){ D.asist[key][t.id]=val; await fetch(`${SB_URL}/rest/v1/asistencias?clave=eq.${key}&tid=eq.${t.id}`,{method:'DELETE',headers:H}).catch(()=>{}); if(val) await sbInsert('asistencias',{clave:key,tid:t.id,val}).catch(()=>{}); }
+  rdAsist();
+};
+
+// ── Casos ─────────────────────────────────────────────────
+window.rdCasos = () => {
+  const tipo=$('ftipo').value; const sev=$('fsev').value; const txt=($('ftxt').value||'').toLowerCase();
+  const casos=D.casos.filter(c=>{ if(tipo&&c.tipo!==tipo)return false; if(sev&&c.sev!==sev)return false; if(txt&&!c.titulo.toLowerCase().includes(txt)&&!(c.desc||'').toLowerCase().includes(txt))return false; return true; });
+  $('caso-list').innerHTML=casos.length?casos.map(c=>casoCard(c,true)).join(''):'<div class="empty">Sin casos.</div>';
+};
+function rdCasosT(){ const tipo=($('tftipo')||{value:''}).value; const casos=tipo?D.casos.filter(c=>c.tipo===tipo):D.casos; const el=$('tc-list'); if(el) el.innerHTML=casos.length?casos.map(c=>casoCard(c,false)).join(''):'<div class="empty">Sin casos registrados.</div>'; }
+window.rdCasosT=rdCasosT;
+
+function casoCard(c,admin){
+  const sev=(c.sev||'baja').toLowerCase();
+  return`<div class="cc ${sev==='alta'?'sa':sev==='media'?'sm':'sb'}">
+    <div style="display:flex;align-items:flex-start;gap:10px">
+      ${c.img?`<img src="${c.img}" style="width:46px;height:46px;object-fit:cover;border-radius:8px;flex-shrink:0;border:1px solid #E5E4DF">`:''}
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-bottom:3px">
+          <span style="font-size:12px;font-weight:600">${c.titulo}</span>
+          <span class="badge ${KB[c.tipo]||'bgray'}">${c.tipo}</span>
+          <span class="badge ${c.sev==='Alta'?'bdanger':c.sev==='Media'?'bwarn':'bok'}">Sev. ${c.sev}</span>
+        </div>
+        <div style="font-size:11px;color:#7A7974;margin-bottom:3px">${(c.desc||'').slice(0,90)}${(c.desc||'').length>90?'...':''}</div>
+        <div style="font-size:10px;color:#7A7974">${c.fecha||''}</div>
+      </div>
+      <div style="display:flex;gap:5px;flex-shrink:0">
+        <button class="btn bs" onclick="verCaso('${c.id}')">Ver</button>
+        ${admin?`<button class="btn bs bd" onclick="elimCaso('${c.id}')">×</button>`:''}
+      </div>
+    </div>
+  </div>`;
+}
+function rdReps(){ const rt=$('rtipo'); rt.innerHTML='<option value="">Todos</option>'+TIPOS.map(t=>`<option>${t}</option>`).join(''); }
+
+// ── Vistas técnico ────────────────────────────────────────
+function rdTecInicio(){
+  const el=$('ti-body');
+  if(!tecActivo){el.innerHTML='<div class="ai">Seleccioná tu nombre arriba para ver tus capacitaciones.</div>';return;}
+  const t=D.tecs.find(x=>x.id===tecActivo); if(!t)return;
+  const h=hoy(); const pend=D.caps.filter(c=>D.res[c.id+'-'+t.id]===undefined); const comp=D.caps.filter(c=>D.res[c.id+'-'+t.id]!==undefined);
+  const venc=comp.filter(c=>{const f=D.res[c.id+'-'+t.id+'_f'];return f&&difd(h,sumd(f,c.vig||365))<0});
+  el.innerHTML=`<div style="font-size:14px;font-weight:600;margin-bottom:.75rem">Hola, ${t.nombre}! · Turno ${t.turno}</div>
+    ${venc.length?`<div class="ae">Tenés ${venc.length} capacitación(es) vencida(s) que debés renovar.</div>`:''}
+    ${pend.length?`<div class="aw">Tenés ${pend.length} capacitación(es) pendiente(s).</div>`:''}
+    <div class="g3" style="margin-bottom:.875rem">
+      <div class="met"><div class="mv">${pend.length}</div><div class="ml">Pendientes</div></div>
+      <div class="met"><div class="mv">${comp.length}</div><div class="ml">Completadas</div></div>
+      <div class="met"><div class="mv">${venc.length}</div><div class="ml">Vencidas</div></div>
+    </div>
+    <div style="font-size:13px;font-weight:600;margin-bottom:.5rem">Capacitaciones disponibles</div>
+    ${D.caps.length?D.caps.map(c=>{ const r=D.res[c.id+'-'+t.id]; const f=D.res[c.id+'-'+t.id+'_f']; let badge='<span class="badge bgray">Pendiente</span>'; if(r!==undefined){if(f){const vn=sumd(f,c.vig||365);const d=difd(h,vn);badge=d<0?`<span class="badge bdanger">${r}% — Vencida</span>`:d<=30?`<span class="badge bwarn">${r}% — Vence en ${d}d</span>`:`<span class="badge bok">${r}% — Aprobada</span>`;}else badge=`<span class="badge bok">${r}%</span>`;} const tq=(c.preguntas||[]).length>0;
+      return`<div class="cc"><div style="display:flex;align-items:center;gap:10px"><div style="flex:1;min-width:0"><div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:3px"><span style="font-size:12px;font-weight:600">${c.titulo}</span><span class="badge ${TB[c.tema]||'bgray'}">${c.tema}</span>${badge}</div><div style="font-size:11px;color:#7A7974">${(c.desc||'').slice(0,75)}${(c.desc||'').length>75?'...':''}</div></div>${tq?`<button class="btn bq bs" style="flex-shrink:0" onclick="iniciarQuiz('${c.id}')">Hacer quiz</button>`:'<span style="font-size:10px;color:#7A7974;flex-shrink:0">Sin quiz</span>'}</div></div>`; }).join(''):'<div class="empty">No hay capacitaciones disponibles.</div>'}
+  `;
+}
+
+function rdTecHist(){
+  var el=$('th-body');
+  if(!tecActivo){el.innerHTML='<div class="ai">Seleccioná tu nombre arriba.</div>';return;}
+  var t=D.tecs.find(function(x){return x.id===tecActivo;}); if(!t)return;
+  var h=hoy();
+  var items=D.caps.map(function(cap){
+    var r=D.res[cap.id+'-'+t.id]; var f=D.res[cap.id+'-'+t.id+'_f']; var vb='';
+    if(r!==undefined&&f){var vn=sumd(f,cap.vig||365);var d=difd(h,vn);
+      vb=d<0?'<span class="badge bdanger">Vencida</span>':d<=30?'<span class="badge bwarn">Vence '+d+'d</span>':'<span class="badge bok">Vigente hasta '+vn+'</span>';}
+    var intentos=D.historial.filter(function(x){return x.cap_id===cap.id && String(x.tec_id)===String(tecActivo);});
+    return {cap:cap,r:r,f:f,vb:vb,intentos:intentos};
+  });
+  var comp=items.filter(function(x){return x.r!==undefined;});
+  var prom=comp.length?Math.round(comp.reduce(function(s,x){return s+x.r;},0)/comp.length):null;
+  var rows=items.map(function(x){
+    var rbadge=x.r!==undefined?'<span class="badge '+(x.r>=60?'bok':'bdanger')+'">'+x.r+'%</span>':'<span class="badge bgray">Pendiente</span>';
+    var rbtn=(x.cap.preguntas||[]).length?'<button class="btn bq bs" onclick="iniciarQuiz(\'' + x.cap.id + '\')" >Repetir</button>':'';
+    var intHTML='';
+    if(x.intentos.length>0){
+      intHTML='<div style="margin-top:6px;padding:8px;background:#F5F4EF;border-radius:8px">'
+        +'<div style="font-size:10px;font-weight:600;color:#7A7974;margin-bottom:4px;text-transform:uppercase">Historial de intentos ('+x.intentos.length+')</div>'
+        +x.intentos.map(function(it,idx){
+          return '<div style="display:flex;align-items:center;justify-content:space-between;font-size:11px;padding:3px 0;border-bottom:1px solid #E5E4DF">'
+            +'<span style="color:#7A7974">'+(idx+1)+'° — '+it.fecha_hora+' — '+it.correctas+'/'+it.total+' correctas</span>'
+            +'<span class="badge '+(it.pct>=60?'bok':'bdanger')+'">'+it.pct+'%</span>'
+            +'</div>';
+        }).join('')
+        +'</div>';
+    }
+    return '<div style="padding:10px 0;border-bottom:1px solid #F1EFE8">'
+      +'<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:5px">'
+      +'<div style="flex:1;min-width:0"><div style="display:flex;align-items:center;gap:5px;flex-wrap:wrap"><span class="lt">'+x.cap.titulo+'</span>'+rbadge+x.vb+'</div>'
+      +'<div class="ls">'+x.cap.tema+(x.f?' · Mejor resultado: '+x.f:'')+'</div></div>'
+      +rbtn+'</div>'+intHTML+'</div>';
+  }).join('');
+  el.innerHTML='<div class="g3" style="margin-bottom:.875rem">'
+    +'<div class="met"><div class="mv">'+t.turno+'</div><div class="ml">Turno</div></div>'
+    +'<div class="met"><div class="mv">'+comp.length+'/'+D.caps.length+'</div><div class="ml">Completadas</div></div>'
+    +'<div class="met"><div class="mv">'+(prom!==null?prom+'%':'—')+'</div><div class="ml">Promedio</div></div></div>'
+    +'<div class="card"><div class="ct">Historial de evaluaciones</div>'+rows+'</div>';
+}
+
+// ── Quiz ──────────────────────────────────────────────────
+function rdQuizSel(){
+  const el=$('tq-body'); if(!tecActivo){el.innerHTML='<div class="ai">Seleccioná tu nombre arriba.</div>';return;}
+  const caps=D.caps.filter(c=>(c.preguntas||[]).length>0);
+  if(!caps.length){el.innerHTML='<div class="empty">No hay capacitaciones con preguntas cargadas.</div>';return;}
+  el.innerHTML='<div style="font-size:13px;font-weight:600;margin-bottom:.75rem">Seleccioná una capacitación</div>'+caps.map(c=>{const r=D.res[c.id+'-'+tecActivo];return`<div class="cc" style="margin-bottom:.5rem"><div style="display:flex;align-items:center;gap:10px"><div style="flex:1"><div style="font-size:13px;font-weight:600;margin-bottom:3px">${c.titulo}</div><div style="font-size:11px;color:#7A7974">${(c.preguntas||[]).length} pregunta(s) · ${c.tema}</div></div>${r!==undefined?`<span class="badge ${r>=60?'bok':'bdanger'}">${r}%</span>`:''}<button class="btn bq bs" onclick="iniciarQuiz('${c.id}')">Iniciar</button></div></div>`;}).join('');
+}
+window.iniciarQuiz = (cid) => {
+  if(!tecActivo){alert('Seleccioná tu nombre primero.');return;}
+  const cap=D.caps.find(c=>c.id===cid); if(!cap||(cap.preguntas||[]).length===0){alert('Esta capacitación no tiene preguntas.');return;}
+  QZ={on:true,cid,qi:0,ans:new Array(cap.preguntas.length).fill(null),done:false,score:0,ok:0};
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('#tabs-tec .tab').forEach((t,i)=>t.classList.toggle('on',i===1));
+  $('s-tq').classList.add('on'); rdQuiz();
+};
+function rdQuiz(){
+  var el=$('tq-body');
+  var cap=D.caps.find(function(c){return c.id===QZ.cid;});
+  if(!cap)return;
+  if(QZ.done){rdQuizRes(cap);return;}
+  var q=cap.preguntas[QZ.qi];
+  var sel=QZ.ans[QZ.qi];
+  var L=['A','B','C','D'];
+
+  // Barra de progreso
+  var progHTML='';
+  for(var pi=0;pi<cap.preguntas.length;pi++){
+    progHTML+='<div class="qdot '+(pi<QZ.qi?'done':pi===QZ.qi?'cur':'')+'" ></div>';
+  }
+
+  // Opciones
+  var optsHTML='';
+  var opts=(q.opts||[]).filter(function(o){return o.trim();});
+  for(var oi=0;oi<opts.length;oi++){
+    var selClass=sel===oi?'sel':'';
+    optsHTML+='<div class="qopt '+selClass+'" onclick="selOpt('+oi+')">'
+      +'<div class="qcirc">'+L[oi]+'</div>'
+      +'<span style="font-size:13px">'+opts[oi]+'</span>'
+      +'</div>';
+  }
+
+  // Botones navegación
+  var navHTML='';
+  if(QZ.qi>0){
+    navHTML+='<button class="btn bs" onclick="navQ(-1)">Anterior</button>';
+  }
+  if(QZ.qi<cap.preguntas.length-1){
+    var disNext=sel===null?'disabled style="opacity:.5;cursor:not-allowed"':'';
+    navHTML+='<button class="btn bp bs" onclick="navQ(1)" '+disNext+'>Siguiente</button>';
+  } else {
+    var disFin=sel===null?'disabled style="opacity:.5;cursor:not-allowed"':'';
+    navHTML+='<button class="btn bp bs" id="btn-finalizar" '+disFin+'>Finalizar</button>';
+  }
+
+  el.innerHTML='<div class="qc">'
+    +'<div class="qprog">'+progHTML+'</div>'
+    +'<div style="font-size:11px;color:#7A7974;margin-bottom:.75rem">Pregunta '+(QZ.qi+1)+' de '+cap.preguntas.length+' · '+cap.titulo+'</div>'
+    +'<div style="font-size:14px;font-weight:600;margin-bottom:1rem;line-height:1.5">'+q.txt+'</div>'
+    +optsHTML
+    +'<div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem">'
+    +'<button class="btn bs" onclick="cancelQ()">Cancelar</button>'
+    +'<div style="display:flex;gap:6px">'+navHTML+'</div>'
+    +'</div></div>';
+
+  // Asignar evento al botón Finalizar por ID para evitar problemas de scope
+  var btnFin=document.getElementById('btn-finalizar');
+  if(btnFin && sel!==null){
+    btnFin.addEventListener('click', function(){ finQ(); });
+  }
+}
+window.selOpt=oi=>{QZ.ans[QZ.qi]=oi;rdQuiz();}; window.navQ=d=>{QZ.qi+=d;rdQuiz();}; window.cancelQ=()=>{QZ={on:false};rdQuizSel();};
+window.finQ = async () => {
+  const cap=D.caps.find(c=>c.id===QZ.cid); if(!cap)return;
+  const corr=QZ.ans.filter((a,i)=>a===cap.preguntas[i].ok).length;
+  const pct=Math.round(corr/cap.preguntas.length*100);
+  const key=cap.id+'-'+tecActivo; D.res[key]=pct; D.res[key+'_f']=hoy();
+  await sbDelWhere('resultados','clave',key);
+  await sbInsert('resultados',{clave:key,valor:pct,fecha:hoy()});
+  const t=D.tecs.find(x=>x.id===tecActivo);
+  if(t) await flog(`${t.nombre} ${t.apellido} completó "${cap.titulo}" con ${pct}%`);
+  QZ.done=true; QZ.score=pct; QZ.ok=corr; rdQuizRes(cap); rdDash();
+};
+function rdQuizRes(cap){
+  var el=$('tq-body'); var ok=QZ.score>=60;
+  var resPregs='';
+  for(var qi=0;qi<cap.preguntas.length;qi++){
+    var q=cap.preguntas[qi]; var ua=QZ.ans[qi]; var isok=(ua===q.ok);
+    var optsR=''; var optsF=(q.opts||[]).filter(function(o){return o.trim();});
+    for(var oi=0;oi<optsF.length;oi++){
+      var cls=oi===q.ok?'ok':(oi===ua&&!isok?'no':'');
+      optsR+='<div class="qopt '+cls+'" style="cursor:default;margin-bottom:4px">'
+        +'<div class="qcirc">'+['A','B','C','D'][oi]+'</div>'
+        +'<span style="font-size:12px">'+optsF[oi]+'</span></div>';
+    }
+    resPregs+='<div style="background:#F5F4EF;border-radius:10px;padding:10px;margin-bottom:8px">'
+      +'<div style="font-size:12px;font-weight:600;margin-bottom:6px">'+(qi+1)+'. '+q.txt+'</div>'
+      +optsR+'</div>';
+  }
+  el.innerHTML='<div class="qc">'
+    +'<div style="text-align:center;padding:1rem 0 1.5rem">'
+    +'<div style="font-size:56px;font-weight:700;color:'+(ok?'#27500A':'#791F1F')+';margin-bottom:.5rem">'+QZ.score+'%</div>'
+    +'<div style="font-size:15px;font-weight:600;margin-bottom:.25rem">'+(ok?'¡Aprobado! 🎉':'Para repasar 📖')+'</div>'
+    +'<div style="font-size:12px;color:#7A7974">'+QZ.ok+' de '+cap.preguntas.length+' correctas</div>'
+    +'</div>'+resPregs
+    +'<div style="display:flex;gap:8px;justify-content:center;margin-top:1rem">'
+    +'<button class="btn" onclick="cancelQ()">Volver</button>'
+    +'<button class="btn bq" id="btn-reintentar">Reintentar</button>'
+    +'</div></div>';
+  var btnR=document.getElementById('btn-reintentar');
+  if(btnR){ btnR.addEventListener('click',function(){ iniciarQuiz(cap.id); }); }
+}
+
+// ── CRUD Caps ─────────────────────────────────────────────
+window.guardarCap = async () => {
+  const tit=$('ctit').value.trim(); if(!tit){alert('Ingresá un título.');return;}
+  const prev=$('cprev');
+  const pregs=pregBuf.filter(p=>p.txt.trim());
+  const row=await sbInsert('caps',{titulo:tit,tema:$('ctema').value,contenido:$('cdesc').value||'',dur:$('cdur').value,vig:parseInt($('cvig').value)||365,fecha:hoy(),img:prev.style.display!=='none'?prev.src:null,preguntas:JSON.stringify(pregs)});
+  D.caps.unshift({id:row.id,titulo:tit,tema:$('ctema').value,desc:$('cdesc').value||'',dur:$('cdur').value,vig:parseInt($('cvig').value)||365,fecha:hoy(),img:prev.style.display!=='none'?prev.src:null,preguntas:pregs});
+  await flog('Capacitación creada: "'+tit+'"');
+  ['ctit','cdesc','cdur'].forEach(id=>$(id).value=''); $('cvig').value='365';
+  prev.style.display='none'; prev.src=''; $('cimg').value='';
+  pregBuf=[]; rdPregs(); closeM('m-cap'); updSelects(); rdAll();
+};
+window.elimCap = async id => { if(!confirm('¿Eliminás esta capacitación?'))return; await sbDel('caps',id); D.caps=D.caps.filter(c=>c.id!==id); updSelects(); rdAll(); };
+window.verCap = id => {
+  const c=D.caps.find(x=>x.id===id); if(!c)return;
+  $('vct').textContent=c.titulo;
+  const comp=D.tecs.filter(t=>D.res[c.id+'-'+t.id]!==undefined);
+  $('vcb').innerHTML=`<div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px"><span class="badge ${TB[c.tema]||'bgray'}">${c.tema}</span>${c.dur?`<span class="badge bgray">${c.dur}</span>`:''}<span class="badge bblue">Vigencia: ${c.vig||365} días</span></div>
+    ${c.img?`<img src="${c.img}" style="max-width:100%;max-height:130px;border-radius:10px;margin-bottom:10px;object-fit:contain;border:1px solid #E5E4DF">`:''}
+    <p style="font-size:12px;line-height:1.6;margin-bottom:10px">${c.desc||'Sin descripción.'}</p>
+    ${(c.preguntas||[]).length?`<div class="ai">${c.preguntas.length} pregunta(s) de evaluación.</div>`:''}
+    <div style="font-size:12px;font-weight:600;margin-bottom:6px">Resultados registrados</div>
+    ${comp.length?comp.map(t=>{const r=D.res[c.id+'-'+t.id];const fd=D.res[c.id+'-'+t.id+'_f']||'—';return`<div class="li"><div class="av">${ini(t.nombre,t.apellido)}</div><div class="lm"><span class="lt">${t.nombre} ${t.apellido}</span><span class="ls">${fd}</span></div><span class="badge ${r>=60?'bok':'bdanger'}">${r}%</span></div>`;}).join(''):'<div style="font-size:11px;color:#7A7974;margin-bottom:10px">Nadie completó esta capacitación aún.</div>'}
+    <div class="hr"></div><div style="font-size:12px;font-weight:600;margin-bottom:8px">Registrar resultado manual</div>
+    <div class="g2" style="margin-bottom:8px">
+      <div class="fld"><label>Técnico</label><select id="stec">${D.tecs.map(t=>`<option value="${t.id}">${t.nombre} ${t.apellido}</option>`).join('')}</select></div>
+      <div class="fld"><label>Resultado (%)</label><input type="number" id="spct" min="0" max="100" value="80"></div>
+    </div><button class="btn bp bs" onclick="regRes('${c.id}')">Registrar</button>`;
+  openM('m-ver-cap');
+};
+window.regRes = async cid => {
+  const tid=$('stec').value; const pct=Math.min(100,Math.max(0,parseInt($('spct').value)||0));
+  const key=cid+'-'+tid; D.res[key]=pct; D.res[key+'_f']=hoy();
+  await sbDelWhere('resultados','clave',key); await sbInsert('resultados',{clave:key,valor:pct,fecha:hoy()});
+  const t=D.tecs.find(x=>x.id===tid); const cap=D.caps.find(x=>x.id===cid);
+  const ahora=new Date(); const fechaHora=ahora.toLocaleDateString('es-AR')+' '+ahora.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
+  const entH=await sbInsert('historial',{tec_id:tid,cap_id:cid,cap_titulo:cap?cap.titulo:'',pct,correctas:pct,total:100,fecha:hoy(),fecha_hora:fechaHora});
+  D.historial.unshift({...entH});
+  if(t&&cap) await flog(`${t.nombre} ${t.apellido} completó "${cap.titulo}" con ${pct}%`);
+  closeM('m-ver-cap'); rdAll(); setTimeout(()=>verCap(cid),80);
+};
+
+// ── CRUD Tecs ─────────────────────────────────────────────
+window.guardarTec = async () => {
+  const n=$('tnom').value.trim(); const a=$('tape').value.trim(); if(!n||!a){alert('Nombre y apellido requeridos.');return;}
+  const row=await sbInsert('tecs',{nombre:n,apellido:a,turno:$('ttur').value});
+  D.tecs.push({id:row.id,nombre:n,apellido:a,turno:$('ttur').value});
+  await flog('Técnico agregado: '+n+' '+a);
+  $('tnom').value=''; $('tape').value=''; closeM('m-tec'); updTecSel(); rdTecs(); rdDash();
+};
+window.editTec = id => {
+  const t=D.tecs.find(x=>x.id===id); if(!t)return;
+  $('eid').value=id; $('enom').value=t.nombre; $('eape').value=t.apellido; $('etur').value=t.turno; openM('m-edit-tec');
+};
+window.editarTec = async () => {
+  const id=$('eid').value; const n=$('enom').value.trim(); const a=$('eape').value.trim(); if(!n||!a){alert('Nombre y apellido requeridos.');return;}
+  const turno=$('etur').value; await sbUpdate('tecs',id,{nombre:n,apellido:a,turno});
+  const idx=D.tecs.findIndex(t=>t.id===id); if(idx>-1){D.tecs[idx].nombre=n;D.tecs[idx].apellido=a;D.tecs[idx].turno=turno;}
+  await flog('Técnico modificado: '+n+' '+a); closeM('m-edit-tec'); updTecSel(); rdTecs(); rdDash();
+};
+window.elimTec = async id => { if(!confirm('¿Eliminás este técnico?'))return; await sbDel('tecs',id); D.tecs=D.tecs.filter(t=>t.id!==id); updTecSel(); rdTecs(); rdDash(); };
+window.verTec = id => {
+  const t=D.tecs.find(x=>x.id===id); if(!t)return;
+  $('vtt').textContent=t.nombre+' '+t.apellido; const h=hoy();
+  const items=D.caps.map(c=>{
+    const r=D.res[c.id+'-'+t.id]; const f=D.res[c.id+'-'+t.id+'_f']; let vb='';
+    if(r!==undefined&&f){const vn=sumd(f,c.vig||365);const d=difd(h,vn);
+      vb=d<0?'<span class="badge bdanger">Vencida</span>':d<=30?'<span class="badge bwarn">Vence '+d+'d</span>':'<span class="badge bok">Vigente</span>';}
+    const intentos=D.historial.filter(x=>String(x.cap_id)===String(c.id)&&String(x.tec_id)===String(t.id));
+    return{c,r,f,vb,intentos};
+  });
+  const comp=items.filter(x=>x.r!==undefined);
+  const prom=comp.length?Math.round(comp.reduce((s,x)=>s+x.r,0)/comp.length):null;
+  const rows=items.map(x=>{
+    const rbadge=x.r!==undefined?'<span class="badge '+( x.r>=60?'bok':'bdanger')+'">'+x.r+'%</span>':'<span class="badge bgray">Pendiente</span>';
+    const intHTML=x.intentos.length?
+      '<div style="margin-top:5px;padding:7px;background:#F5F4EF;border-radius:7px">'+
+      '<div style="font-size:10px;font-weight:600;color:#7A7974;margin-bottom:4px">Intentos ('+x.intentos.length+')</div>'+
+      x.intentos.map((it,idx)=>
+        '<div style="display:flex;justify-content:space-between;font-size:11px;padding:3px 0;border-bottom:1px solid #E5E4DF">'+
+        '<span style="color:#7A7974">'+( idx+1)+'° — '+it.fecha_hora+' — '+it.correctas+'/'+it.total+' correctas</span>'+
+        '<span class="badge '+( it.pct>=60?'bok':'bdanger')+'">'+it.pct+'%</span></div>'
+      ).join('')+'</div>':''  ;
+    return '<div style="padding:8px 0;border-bottom:1px solid #F1EFE8">'+
+      '<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px">'+
+      '<div><div style="display:flex;align-items:center;gap:5px;flex-wrap:wrap"><span class="lt">'+x.c.titulo+'</span>'+rbadge+x.vb+'</div>'+
+      '<div class="ls">'+x.c.tema+(x.f?' · '+x.f:'')+'</div></div></div>'+intHTML+'</div>';
+  }).join('');
+  $('vtb').innerHTML=
+    '<div class="g3" style="margin-bottom:10px">'+
+    '<div class="met"><div class="mv">'+t.turno+'</div><div class="ml">Turno</div></div>'+
+    '<div class="met"><div class="mv">'+comp.length+'</div><div class="ml">Completadas</div></div>'+
+    '<div class="met"><div class="mv">'+( prom!==null?prom+'%':'—')+'</div><div class="ml">Promedio</div></div></div>'+
+    '<div class="card"><div class="ct">Historial de evaluaciones</div>'+rows+'</div>';
+  openM('m-ver-tec');
+};
+
+// ── CRUD Casos ────────────────────────────────────────────
+window.guardarCaso = async () => {
+  const tit=$('kastit').value.trim(); if(!tit){alert('Ingresá un título.');return;}
+  const prev=$('kasprev');
+  const row=await sbInsert('casos',{titulo:tit,tipo:$('kastipo').value,sev:$('kassev').value,contenido:$('kasdesc').value||'',causa:$('kascausa').value||'',accion:$('kasacc').value||'',leccion:$('kaslec').value||'',img:prev.style.display!=='none'?prev.src:null,fecha:hoy()});
+  D.casos.unshift({id:row.id,titulo:tit,tipo:$('kastipo').value,sev:$('kassev').value,desc:$('kasdesc').value||'',causa:$('kascausa').value||'',accion:$('kasacc').value||'',leccion:$('kaslec').value||'',img:prev.style.display!=='none'?prev.src:null,fecha:hoy()});
+  await flog('Caso registrado: "'+tit+'"');
+  ['kastit','kasdesc','kascausa','kasacc','kaslec'].forEach(id=>$(id).value='');
+  prev.style.display='none'; prev.src=''; $('kasimg').value=''; closeM('m-caso'); rdAll();
+};
+window.elimCaso = async id => { if(!confirm('¿Eliminás este caso?'))return; await sbDel('casos',id); D.casos=D.casos.filter(c=>c.id!==id); rdAll(); };
+window.verCaso = async id => {
+  const caso=D.casos.find(x=>x.id===id); if(!caso)return;
+  $('vkast').textContent=caso.titulo;
+  // Cargar comentarios
+  const coms = await sbAll('comentarios','&caso_id=eq.'+id).catch(()=>[]);
+  const comsHTML = coms.length
+    ? coms.map(co=>'<div style="padding:8px;background:#fff;border-radius:8px;margin-bottom:6px;border:1px solid #E5E4DF">'
+        +'<div style="display:flex;justify-content:space-between;margin-bottom:3px">'
+        +'<span style="font-size:11px;font-weight:600;color:#0C447C">'+co.autor+'</span>'
+        +'<span style="font-size:10px;color:#7A7974">'+co.fecha_hora+'</span></div>'
+        +'<p style="font-size:12px;line-height:1.6">'+co.texto+'</p></div>'
+      ).join('')
+    : '<div style="font-size:11px;color:#7A7974;text-align:center;padding:6px">Sin comentarios aún.</div>';
+  // Nombre del usuario actual
+  var autorLabel='';
+  if(rol==='jefe'){ autorLabel='Farmacéutico Jefe'; }
+  else if(tecActivo){ var t=D.tecs.find(x=>x.id===tecActivo); if(t) autorLabel=t.nombre+' '+t.apellido; }
+  // Formulario comentario
+  var formCom=autorLabel
+    ? '<div style="font-size:11px;color:#7A7974;margin-bottom:4px">Comentar como: <strong style="color:#1A1915">'+autorLabel+'</strong></div>'
+      +'<textarea id="com-texto" rows="2" placeholder="Escribí tu comentario..." style="width:100%;padding:8px 10px;border:1px solid #D5D4CF;border-radius:8px;font-size:12px;font-family:inherit;resize:vertical;margin-bottom:6px"></textarea>'
+      +'<button class="btn bp bs" id="btn-com-enviar">Enviar comentario</button>'
+    : '<div style="font-size:11px;color:#7A7974">Seleccioná tu nombre para comentar.</div>';
+  $('vkasb').innerHTML=
+    '<div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:10px">'
+    +'<span class="badge '+(KB[caso.tipo]||'bgray')+'">'+caso.tipo+'</span>'
+    +'<span class="badge '+(caso.sev==='Alta'?'bdanger':caso.sev==='Media'?'bwarn':'bok')+'">Sev. '+caso.sev+'</span>'
+    +'<span class="badge bgray">'+caso.fecha+'</span></div>'
+    +(caso.img?'<img src="'+caso.img+'" style="max-width:100%;max-height:150px;border-radius:10px;margin-bottom:10px;object-fit:contain;border:1px solid #E5E4DF">':'')
+    +'<div style="margin-bottom:10px"><div style="font-size:10px;font-weight:600;color:#7A7974;margin-bottom:3px;text-transform:uppercase">Descripción de la falla</div><p style="font-size:12px;line-height:1.7">'+(caso.desc||'—')+'</p></div>'
+    +'<div style="margin-bottom:10px"><div style="font-size:10px;font-weight:600;color:#7A7974;margin-bottom:3px;text-transform:uppercase">Causa raíz identificada</div><p style="font-size:12px;line-height:1.7">'+(caso.causa||'—')+'</p></div>'
+    +'<div style="margin-bottom:10px"><div style="font-size:10px;font-weight:600;color:#7A7974;margin-bottom:3px;text-transform:uppercase">Acción correctiva tomada</div><p style="font-size:12px;line-height:1.7">'+(caso.accion||'—')+'</p></div>'
+    +'<div style="background:#F5F4EF;border-radius:10px;padding:12px;border-left:3px solid #0C447C;margin-bottom:14px">'
+    +'<div style="font-size:10px;font-weight:600;color:#0C447C;margin-bottom:4px;text-transform:uppercase">Lección aprendida</div>'
+    +'<p style="font-size:13px;line-height:1.7;font-weight:600">'+(caso.leccion||'—')+'</p></div>'
+    +'<div style="border-top:1px solid #F1EFE8;padding-top:12px">'
+    +'<div style="font-size:12px;font-weight:600;margin-bottom:8px">💬 Comentarios del equipo</div>'
+    +'<div style="background:#F5F4EF;border-radius:10px;padding:10px;margin-bottom:10px">'+comsHTML+'</div>'
+    +formCom+'</div>';
+  openM('m-ver-caso');
+  // Asignar evento al botón enviar
+  var btnEnv=document.getElementById('btn-com-enviar');
+  if(btnEnv && autorLabel){
+    btnEnv.addEventListener('click', async function(){
+      var txt=($('com-texto')||{value:''}).value.trim();
+      if(!txt){alert('Escribí un comentario antes de enviar.');return;}
+      var ahora=new Date();
+      var fh=ahora.toLocaleDateString('es-AR')+' '+ahora.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
+      await sbInsert('comentarios',{caso_id:id, autor:autorLabel, texto:txt, fecha_hora:fh});
+      await verCaso(id);
+    });
+  }
+};
+
+// ── Preguntas ─────────────────────────────────────────────
+window.addPreg = () => { pregBuf.push({txt:'',opts:['','','',''],ok:0}); rdPregs(); };
+function rdPregs(){
+  const el=$('plist'); if(!pregBuf.length){el.innerHTML='<div style="font-size:11px;color:#7A7974;margin-bottom:8px">Sin preguntas. Hacé clic en "+ Agregar pregunta".</div>';return;}
+  el.innerHTML=pregBuf.map((p,pi)=>`<div class="pb2"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px"><span style="font-size:12px;font-weight:600">Pregunta ${pi+1}</span><button class="btn bs bd" onclick="qPreg(${pi})">Quitar</button></div>
+    <input type="text" placeholder="Enunciado de la pregunta..." value="${p.txt}" oninput="pregBuf[${pi}].txt=this.value">
+    ${p.opts.map((o,oi)=>`<div class="rr"><input type="radio" name="ok${pi}" ${p.ok===oi?'checked':''} onchange="pregBuf[${pi}].ok=${oi}" title="Marcar como correcta"><input type="text" placeholder="Opción ${oi+1}" value="${o}" oninput="pregBuf[${pi}].opts[${oi}]=this.value"></div>`).join('')}
+  </div>`).join('');
+}
+window.qPreg = i => { pregBuf.splice(i,1); rdPregs(); };
+
+// ── CSV ───────────────────────────────────────────────────
+const csvE=v=>{const s=String(v||'');return s.includes(',')||s.includes('"')||s.includes('\n')?`"${s.replace(/"/g,'""')}"`:s;};
+const dlCSV=(name,rows)=>{const a=document.createElement('a');a.href='data:text/csv;charset=utf-8,\uFEFF'+encodeURIComponent(rows.map(r=>r.map(csvE).join(',')).join('\n'));a.download=name;a.click();};
+window.expCaps=()=>{const turno=$('rturno').value;const tecs=turno?D.tecs.filter(t=>t.turno===turno):D.tecs;const rows=[['Técnico','Apellido','Turno',...D.caps.map(c=>c.titulo),'Promedio']];tecs.forEach(t=>{const res=D.caps.map(c=>D.res[c.id+'-'+t.id]!==undefined?D.res[c.id+'-'+t.id]:'Pendiente');const nums=res.filter(r=>typeof r==='number');rows.push([t.nombre,t.apellido,t.turno,...res,nums.length?Math.round(nums.reduce((s,r)=>s+r,0)/nums.length)+'%':'—']);});dlCSV('capacitaciones_favaloro.csv',rows);};
+window.expAsist=()=>{const rows=[['Capacitación','Fecha','Técnico','Apellido','Turno','Asistencia']];D.caps.forEach(c=>Object.keys(D.asist).filter(k=>k.startsWith(c.id+'-')).forEach(key=>{const fec=key.replace(c.id+'-','');D.tecs.forEach(t=>{const e=D.asist[key][t.id]||'—';rows.push([c.titulo,fec,t.nombre,t.apellido,t.turno,e==='P'?'Presente':e==='A'?'Ausente':'Sin registro']);});}));dlCSV('asistencia_favaloro.csv',rows);};
+window.expAsistF=(cid,fec)=>{const cap=D.caps.find(c=>c.id===cid);const key=cid+'-'+fec;const rows=[['Capacitación','Fecha','Técnico','Apellido','Turno','Asistencia']];D.tecs.forEach(t=>{const e=D.asist[key]?D.asist[key][t.id]||'—':'—';rows.push([cap?cap.titulo:'',fec,t.nombre,t.apellido,t.turno,e==='P'?'Presente':e==='A'?'Ausente':'Sin registro']);});dlCSV('asistencia_'+fec+'.csv',rows);};
+window.expCasos=()=>{const tipo=$('rtipo').value;const casos=tipo?D.casos.filter(c=>c.tipo===tipo):D.casos;const rows=[['Fecha','Título','Tipo','Severidad','Descripción','Causa raíz','Acción correctiva','Lección']];casos.forEach(c=>rows.push([c.fecha,c.titulo,c.tipo,c.sev,c.desc,c.causa,c.accion,c.leccion]));dlCSV('casos_favaloro.csv',rows);};
+window.expAlertas=()=>{const h=hoy();const rows=[['Técnico','Apellido','Turno','Capacitación','Última evaluación','Resultado','Vence','Días restantes','Estado']];D.tecs.forEach(t=>D.caps.forEach(c=>{const r=D.res[c.id+'-'+t.id];const f=D.res[c.id+'-'+t.id+'_f'];if(r!==undefined&&f){const vn=sumd(f,c.vig||365);const d=difd(h,vn);const est=d<0?'Vencida':d<=30?'Por vencer':'Vigente';if(est!=='Vigente')rows.push([t.nombre,t.apellido,t.turno,c.titulo,f,r+'%',vn,d,est]);}}));dlCSV('alertas_vencimiento.csv',rows);};
+
+// ── Editar Capacitación ───────────────────────────────────
+let epregBuf = [];
+
+window.editCap = id => {
+  const cap = D.caps.find(x=>x.id===id); if(!cap) return;
+  $('ecap-id').value = id;
+  $('ecap-tit').value = cap.titulo || '';
+  $('ecap-desc').value = cap.desc || '';
+  $('ecap-dur').value = cap.dur || '';
+  $('ecap-vig').value = cap.vig || 365;
+  // Setear tema
+  const sel = $('ecap-tema');
+  for(let i=0;i<sel.options.length;i++){
+    if(sel.options[i].value === cap.tema){ sel.selectedIndex=i; break; }
+  }
+  // Cargar preguntas existentes
+  epregBuf = (cap.preguntas||[]).map(p=>({txt:p.txt||'', opts:[...p.opts], ok:p.ok||0}));
+  rdEPregs();
+  openM('m-edit-cap');
+};
+
+window.addEPreg = () => { epregBuf.push({txt:'',opts:['','','',''],ok:0}); rdEPregs(); };
+
+function rdEPregs(){
+  const el=$('ecap-plist');
+  if(!epregBuf.length){el.innerHTML='<div style="font-size:11px;color:#7A7974;margin-bottom:8px">Sin preguntas. Hacé clic en "+ Agregar pregunta".</div>';return;}
+  el.innerHTML=epregBuf.map((p,pi)=>`<div class="pb2">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px">
+      <span style="font-size:12px;font-weight:600">Pregunta ${pi+1}</span>
+      <button class="btn bs bd" onclick="quitarEPreg(${pi})">Quitar</button>
+    </div>
+    <input type="text" placeholder="Enunciado de la pregunta..." value="${p.txt.replace(/"/g,'&quot;')}" oninput="epregBuf[${pi}].txt=this.value">
+    ${p.opts.map((o,oi)=>`<div class="rr">
+      <input type="radio" name="eok${pi}" ${p.ok===oi?'checked':''} onchange="epregBuf[${pi}].ok=${oi}" title="Correcta">
+      <input type="text" placeholder="Opción ${oi+1}" value="${o.replace(/"/g,'&quot;')}" oninput="epregBuf[${pi}].opts[${oi}]=this.value">
+    </div>`).join('')}
+  </div>`).join('');
+}
+
+window.quitarEPreg = i => { epregBuf.splice(i,1); rdEPregs(); };
+
+window.guardarEditCap = async () => {
+  const id = $('ecap-id').value;
+  const tit = $('ecap-tit').value.trim();
+  if(!tit){alert('Ingresá un título.');return;}
+  const pregs = epregBuf.filter(p=>p.txt.trim());
+  const datos = {
+    titulo: tit,
+    tema: $('ecap-tema').value,
+    contenido: $('ecap-desc').value||'',
+    dur: $('ecap-dur').value,
+    vig: parseInt($('ecap-vig').value)||365,
+    preguntas: JSON.stringify(pregs)
+  };
+  await sbUpdate('caps', id, datos);
+  // Actualizar en memoria
+  const idx = D.caps.findIndex(x=>x.id===id);
+  if(idx>-1){
+    D.caps[idx].titulo  = datos.titulo;
+    D.caps[idx].tema    = datos.tema;
+    D.caps[idx].desc    = datos.contenido;
+    D.caps[idx].dur     = datos.dur;
+    D.caps[idx].vig     = datos.vig;
+    D.caps[idx].preguntas = pregs;
+  }
+  await flog('Capacitación modificada: "'+tit+'"');
+  closeM('m-edit-cap');
+  rdAll();
+};
+
+function rdAll(){ rdDash(); rdCaps(); rdTecs(); rdCasos(); if(rol==='tecnico'){rdTecInicio();rdTecHist();} }
+
+// ── INICIO ────────────────────────────────────────────────
+$('afec').value=hoy();
+rdPregs();
+
+(async()=>{
+  try {
+    await cargar();
+    await seed();
+    updSelects(); updTecSel();
+    // Arrancar como técnico
+    rol='tecnico';
+    $('tabs-jefe').style.display='none'; $('tabs-tec').style.display='block';
+    $('tec-sel-wrap').style.display='block'; $('bell-btn').style.display='none';
+    $('rb-tec').classList.add('on'); $('rb-jefe').classList.remove('on');
+    document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+    $('s-ti').classList.add('on');
+    document.querySelectorAll('#tabs-tec .tab').forEach((t,i)=>t.classList.toggle('on',i===0));
+    rdTecInicio(); rdDash(); rdCaps(); rdTecs(); rdCasos();
+    $('bdot').classList.toggle('on', getAlertas().length>0);
+    $('ls').style.display='none'; $('ap').style.display='block';
+  } catch(e){
+    console.error(e);
+    $('ls').innerHTML=`<div style="text-align:center;padding:2rem;max-width:380px">
+      <div style="font-size:40px;margin-bottom:1rem">⚠️</div>
+      <div style="font-size:15px;font-weight:600;color:#791F1F;margin-bottom:.75rem">Error al conectar con Supabase</div>
+      <div style="font-size:12px;color:#7A7974;margin-bottom:.5rem">Detalle: <strong>${e.message||e}</strong></div>
+      <div style="font-size:11px;color:#7A7974;background:#F5F4EF;padding:8px;border-radius:8px;margin-bottom:1rem;text-align:left">
+        Posibles causas:<br>
+        • Las tablas no fueron creadas en Supabase<br>
+        • La conexión a internet está cortada<br>
+        • El proyecto de Supabase está pausado
+      </div>
+      <button onclick="location.reload()" style="padding:8px 20px;background:#0C447C;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:13px">Reintentar</button>
+    </div>`;
+  }
+})();
+
+// Timeout de seguridad: si en 20 segundos no cargó, mostrar error
+setTimeout(()=>{
+  if($('ls').style.display !== 'none'){
+    $('ls').innerHTML=`<div style="text-align:center;padding:2rem;max-width:380px">
+      <div style="font-size:40px;margin-bottom:1rem">⏱️</div>
+      <div style="font-size:15px;font-weight:600;color:#791F1F;margin-bottom:.75rem">La conexión tardó demasiado</div>
+      <div style="font-size:12px;color:#7A7974;margin-bottom:.5rem">El proyecto Supabase puede estar pausado por inactividad.</div>
+      <div style="font-size:11px;color:#7A7974;background:#F5F4EF;padding:8px;border-radius:8px;margin-bottom:1rem;text-align:left">
+        Para activarlo:<br>
+        1. Entrá a <strong>supabase.com</strong><br>
+        2. Abrí el proyecto <strong>favaloro-esterilizacion</strong><br>
+        3. Hacé clic en <strong>"Restore project"</strong> si aparece<br>
+        4. Esperá 1 minuto y recargá esta página
+      </div>
+      <button onclick="location.reload()" style="padding:8px 20px;background:#0C447C;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:13px">Reintentar</button>
+    </div>`;
+  }
+}, 20000);
+</script>
+</body>
+</html>
